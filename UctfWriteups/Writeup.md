@@ -4,6 +4,7 @@ I played Uctf with the Cyber_jedi team.I solved two challenges.
 
 - E corp
 - Captcha | 1
+- Captcha | 2
   
 ### E-CORP
 
@@ -61,3 +62,20 @@ e by using the vulnerable endpoint to access it via Curl.
     {"status":"success","post":"uctf{4z174_1n_urm14}"}
 
 
+###  CAPTCHA | 1
+
+
+<img src='https://github.com/SENSEIXENUS2/Ctf-writeupsScripts/blob/main/assets/Images/Utcf2.jpg' width= "450" height="450">
+
+In this challenge,the main task was to solve 300 captchas to get the flag.
+
+<img src='https://github.com/SENSEIXENUS2/Ctf-writeupsScripts/blob/main/assets/Images/Uctf3.jpg' width="450" height="450">
+
+
+I noticed that text in the image can be read with the aid of OCR(optical character recognition).I created a script to autosolve it using python(pytessercat module and requests module because the site uses cookies).
+
+
+<img src = "https://github.com/SENSEIXENUS2/Ctf-writeupsScripts/blob/main/assets/Images/Uctf4.jpg" width="450" height="450">
+
+This is the link to script <a href="https://github.com/SENSEIXENUS2/Ctf-writeupsScripts/blob/main/UctfWriteups/captcha1.py
+">Captcha1's script</a>
