@@ -5,7 +5,7 @@ import re
 class crackHash():
       @staticmethod
       def crackAnimals(hashx:str):
-          wordlistAnimals = ["dog","camel","cat","snake","horse","eagle","duck","fox","bear","penguin","mouse"]
+          wordlistAnimals = ["rabbit","dog","camel","cat","snake","horse","eagle","duck","fox","bear","penguin","mouse"]
           for animal in wordlistAnimals:
               hexhash = hashlib.sha1(animal.encode())
               hexhash = hexhash.digest().hex()
