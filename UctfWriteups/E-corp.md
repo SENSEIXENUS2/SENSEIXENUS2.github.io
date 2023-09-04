@@ -8,6 +8,8 @@ I played Uctf with the Cyber_jedi team.I solved two challenges.
 ###ECORP
 
 ![Image](https://github.com/SENSEIXENUS2/Ctf-writeupsScripts/blob/main/assets/Images/Uctf.jpg)
+   
+   
    In this web challenge,the website allows access to posts made by users.So,I viewed the source code and discovered a vulnerable code snippet in the api endpoint <u>'/api/view.php'</u> code.The main task in the challenge is to load a website that can't be accessed outside i.e if not connected to their network
 The vulnerable code snippet is
 
