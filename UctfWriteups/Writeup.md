@@ -126,4 +126,5 @@ Link to the script <a href="https://github.com/SENSEIXENUS2/Ctf-writeupsScripts/
 
 
 Link to my teammate(grepppp)'s writeup <a href="https://gr33pp.github.io/posts/urmia-ctf-2023/writeup">Greppp</a>
+
 Thanks for reading!!!
