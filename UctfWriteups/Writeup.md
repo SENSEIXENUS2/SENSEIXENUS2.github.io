@@ -88,3 +88,8 @@ I noticed that text in the image can be read with the aid of OCR(optical charact
 
 This is the link to the script <a href="https://github.com/SENSEIXENUS2/Ctf-writeupsScripts/blob/main/UctfWriteups/captcha1.py
 ">Captcha1's script</a>
+### Flag
+
+<img src='https://github.com/SENSEIXENUS2/Ctf-writeupsScripts/blob/main/assets/Images/Uctf5.jpg' width="600" height="600">
+
+
