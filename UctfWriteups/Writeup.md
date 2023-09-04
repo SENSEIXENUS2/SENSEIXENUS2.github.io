@@ -112,7 +112,7 @@ You can recreate the hash by using python3 hashlib module.
 
 <img src="https://github.com/SENSEIXENUS2/Ctf-writeupsScripts/blob/main/assets/Images/Uctfcaptcha24.jpg" width="600" height="600">
 
-I created a python script to automate the whole process and collect the flag.I used python modules(hashlib and requests)
+I created a python script to automate the whole process and collect the flag.I used python modules(hashlib,requests and re)
 ### Code summary
 - I created a class function that collects the Sha-1 hash and returns the animal's name if the hashed animal name is equal to the hash of the provided to the function.The name of the animals are stored in a list and iterated in a for loop
 where it is hashed and compared against the hash provided and if the hashes are equal,it returns the animal's name and breaks the for loop
