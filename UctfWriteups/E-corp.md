@@ -5,7 +5,7 @@ I played Uctf with the Cyber_jedi team.I solved two challenges.
 - E corp
 - Captcha | 1
   
-###ECORP
+### E-CORP
 
 ![Image](https://github.com/SENSEIXENUS2/Ctf-writeupsScripts/blob/main/assets/Images/Uctf.jpg)
    
