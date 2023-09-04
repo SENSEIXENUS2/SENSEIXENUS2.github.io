@@ -1,6 +1,6 @@
 <h1>Writeup for Uctf</h1>
 
-I played Uctf with the Cyber_jedi team.I solved two challenges.
+I played Uctf with the Cyber_jedi team.I solved three challenges.
 
 - E corp
 - Captcha | 1
@@ -85,5 +85,5 @@ I noticed that text in the image can be read with the aid of OCR(optical charact
 
 <img src = "https://github.com/SENSEIXENUS2/Ctf-writeupsScripts/blob/main/assets/Images/Uctf4.jpg" width="450" height="450">
 
-This is the link to script <a href="https://github.com/SENSEIXENUS2/Ctf-writeupsScripts/blob/main/UctfWriteups/captcha1.py
+This is the link to the script <a href="https://github.com/SENSEIXENUS2/Ctf-writeupsScripts/blob/main/UctfWriteups/captcha1.py
 ">Captcha1's script</a>
