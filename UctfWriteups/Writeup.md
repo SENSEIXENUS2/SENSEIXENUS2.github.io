@@ -77,9 +77,9 @@ I noticed that text in the image can be read with the aid of OCR(optical charact
 ### My Approach
 
 - Submitted a request to the url and submitted the first captcha
-- Use split() to collect the base64 bytes of the image
-- Decrypted it with the base64 module,stored the data in an already created png file
-- Used Pytesseract to extract the text
+- Use split() function to collect the base64 bytes of the image
+- Decoded it with the base64 module,stored the data in an already created png file
+- Used Pytesseract to extract the text from the png image
 - Used a class function to submit the captcha value
 
 
