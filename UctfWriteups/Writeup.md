@@ -93,3 +93,17 @@ This is the link to the script <a href="https://github.com/SENSEIXENUS2/Ctf-writ
 <img src='https://github.com/SENSEIXENUS2/Ctf-writeupsScripts/blob/main/assets/Images/Uctf5.jpg' width="600" height="600">
 
 
+### Captcha | 2
+<img src= "https://github.com/SENSEIXENUS2/Ctf-writeupsScripts/blob/main/assets/Images/Uctfcaptcha20.jpg" width="600" height="600">
+
+
+In this challenge,the task was to submit 100 captchas but it was different this time because the captcha pictures was replaced with images stored on the server and the images contain pictures of an animal.
+
+<img src ="https://github.com/SENSEIXENUS2/Ctf-writeupsScripts/blob/main/assets/Images/Uctfcaptcha21.jpg" width="600" height="600">
+
+I viewed the source code of the site and I noticed that images' names on the server were in hash format.
+
+<img src="https://github.com/SENSEIXENUS2/Ctf-writeupsScripts/blob/main/assets/Images/Uctfcaptcha22.jpg" width="600" height="600">
+I copied the hash and pasted it in on Google and got this answer from a Hashlookup site.The dev created a sha-1 hash using the animal's name and used the hash as the picture's name.
+
+<img src="https://github.com/SENSEIXENUS2/Ctf-writeupsScripts/blob/main/assets/Images/Uctfcaptcha23.jpg" width="600" height="600">
