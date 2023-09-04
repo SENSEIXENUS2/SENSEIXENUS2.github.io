@@ -51,7 +51,5 @@ if __name__ == "__main__":
    text2 = crackHash.crackAnimals(text[1])
    for i in range(1,500):
        (text1,text2) = solver.submit(text1,text2)
-       text1 = text1
-       text2 = text2
 
 
