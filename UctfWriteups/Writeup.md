@@ -73,7 +73,7 @@ In this challenge,the main task was to solve 300 captchas to get the flag.
 <img src='https://github.com/SENSEIXENUS2/Ctf-writeupsScripts/blob/main/assets/Images/Uctf3.jpg' width="450" height="450">
 
 
-I noticed that text in the image can be read with the aid of OCR(optical character recognition).I created a script to autosolve it using python(pytessercat module,requests,base64).
+I noticed that text in the image can be read with the aid of OCR(optical character recognition).I created a script to autosolve it using python modules(pytessercat module,requests,base64).
 ### My Approach
 
 - Submitted a request to the url and submitted the first captcha
@@ -97,7 +97,7 @@ This is the link to the script <a href="https://github.com/SENSEIXENUS2/Ctf-writ
 <img src= "https://github.com/SENSEIXENUS2/Ctf-writeupsScripts/blob/main/assets/Images/Uctfcaptcha20.jpg" width="600" height="600">
 
 
-In this challenge,the task was to submit 100 captchas but it was different this time because the captcha pictures was replaced with images stored on the server and the images contain pictures of an animal.
+In this challenge,the task was to submit 100 captchas but it was different this time because the captcha pictures were replaced with images stored on the server and the images contained pictures of an animal and can't be read with OCR
 
 <img src ="https://github.com/SENSEIXENUS2/Ctf-writeupsScripts/blob/main/assets/Images/Uctfcaptcha21.jpg" width="600" height="600">
 
