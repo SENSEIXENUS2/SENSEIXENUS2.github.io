@@ -1,4 +1,5 @@
-   In this web challenge,the website allows access to posts made by users.So,I viewed the source code and discovered a vulnerable code snippet in the api endpoint '/api/view.php' code.The main task in the challenge is to load a website that can't be accessed outside i.e if not connected to their network
+<h1>Writeup for Uctf</h1>
+   In this web challenge,the website allows access to posts made by users.So,I viewed the source code and discovered a vulnerable code snippet in the api endpoint <u>'/api/view.php'</u> code.The main task in the challenge is to load a website that can't be accessed outside i.e if not connected to their network
 The vulnerable code snippet is
 
   
