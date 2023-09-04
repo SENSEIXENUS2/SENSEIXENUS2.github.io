@@ -72,7 +72,15 @@ In this challenge,the main task was to solve 300 captchas to get the flag.
 <img src='https://github.com/SENSEIXENUS2/Ctf-writeupsScripts/blob/main/assets/Images/Uctf3.jpg' width="450" height="450">
 
 
-I noticed that text in the image can be read with the aid of OCR(optical character recognition).I created a script to autosolve it using python(pytessercat module and requests module because the site uses cookies).
+I noticed that text in the image can be read with the aid of OCR(optical character recognition).I created a script to autosolve it using python(pytessercat module,requests,base64).
+### My Approach
+
+- Submitted a request to the url and submitted the first captcha
+- Use split() to collect the base64 bytes of the image
+- Decrypted it with the base64 module,stored the data in an already created png file
+- Used Pytesseract to extract the text
+- Used a class function to submit the captcha value
+
 
 
 <img src = "https://github.com/SENSEIXENUS2/Ctf-writeupsScripts/blob/main/assets/Images/Uctf4.jpg" width="450" height="450">
