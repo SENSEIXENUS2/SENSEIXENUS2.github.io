@@ -1,4 +1,4 @@
-   In this web challenge,the website allows access to post.So,I viewed the source code and discovered a vulnerable code snippet in the api endpoint '/api/view' code.The main task in the challenge is to load a website that can't be accessed outside i.e if not connected to their network
+   In this web challenge,the website allows access to posts made by users.So,I viewed the source code and discovered a vulnerable code snippet in the api endpoint '/api/view.php' code.The main task in the challenge is to load a website that can't be accessed outside i.e if not connected to their network
 The vulnerable code snippet is
 
   
@@ -16,8 +16,9 @@ The vulnerable code snippet is
             });
 
 The api receives a request containing json data and uses the file:/// url to load post already saved with a user's id
-The api endpoint code loads any url submitted to it without any form of restrictions and it makes it susceptible to Server side request forgery which occurs when a website is induced to load a particular url.
-     
+The api endpoint code loads any url submitted to it without any form of restrictions and it makes it susceptible to Server Side Request Forgery which occurs when a website is induced to load a particular url.I gained access to the websit
+e by using the vulnerable endpoint to access it via Curl.  
+   
     curl https://ecorpblog.uctf.ir/api/view.php -v -X POST --header 'Content-Type:application/json' -d '{"post": "http://admin-panel.local/"}'
 
     ####RESPONSE#####
