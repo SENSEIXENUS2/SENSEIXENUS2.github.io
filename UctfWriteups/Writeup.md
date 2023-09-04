@@ -107,3 +107,21 @@ I viewed the source code of the site and I noticed that images' names on the ser
 I copied the hash and pasted it in on Google and got this answer from a Hashlookup site.The dev created a sha-1 hash using the animal's name and used the hash as the picture's name.
 
 <img src="https://github.com/SENSEIXENUS2/Ctf-writeupsScripts/blob/main/assets/Images/Uctfcaptcha23.jpg" width="600" height="600">
+
+You can recreate the hash by using python3 hashlib module.
+
+<img src="https://github.com/SENSEIXENUS2/Ctf-writeupsScripts/blob/main/assets/Images/Uctfcaptcha24.jpg" width="600" height="600">
+
+I created a python script to automate the whole process and collect the flag.I used python modules(hashlib and requests)
+### Code summary
+- I created a class function that collects the Sha-1 hash and returns the animal's name if the hashed animal name is equal to the hash of the provided to the function.The name of the animals are stored in a list and iterated in a for loop
+where it is hashed and compared against the hash provided and if the hashes are equal,it returns the animal's name and breaks the for loop
+- I also created another class to submit the captcha after it has been cracked and another class function to extract the hash using regex format [A-Z0-9]{40}.
+
+### Script result and flag
+
+<img src="https://github.com/SENSEIXENUS2/Ctf-writeupsScripts/blob/main/assets/Images/Uctfcaptcha2.jpg" width="600" height="600">
+
+Link to the script <a href="https://github.com/SENSEIXENUS2/Ctf-writeupsScripts/blob/main/UctfWriteups/captcha2.py">Captcha2's script</a>
+
+Thanks for reading!!!
