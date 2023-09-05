@@ -114,7 +114,7 @@ You can recreate the hash by using python3 hashlib module.
 
 I created a python script to automate the whole process and collect the flag.I used python modules(hashlib,requests and re)
 ### Code summary
-- I created a class function that collects the Sha-1 hash and returns the animal's name if the hashed animal name is equal to the hash of the provided to the function.The name of the animals are stored in a list and iterated in a for loop
+- I created a class function that collects the Sha-1 hash and returns the animal's name if the hashed animal name is equal to the hash provided to the function.The name of the animals are stored in a list and iterated in a for loop
 where it is hashed and compared against the hash provided and if the hashes are equal,it returns the animal's name and breaks the for loop
 - I also created another class to submit the captcha after it has been cracked and another class function to extract the hash using regex format [A-Z0-9]{40}.
 
@@ -125,6 +125,6 @@ where it is hashed and compared against the hash provided and if the hashes are 
 Link to the script <a href="https://github.com/SENSEIXENUS2/Ctf-writeupsScripts/blob/main/UctfWriteups/captcha2.py">Captcha2's script</a>
 
 
-Link to my teammate(grepppp)'s writeup <a href="https://gr33pp.github.io/posts/urmia-ctf-2023/writeup">Greppp</a>
+Link to my teammates(grepppp and hackyou)' writeup <a href="https://gr33pp.github.io/posts/urmia-ctf-2023/writeup">Greppp</a><P> <P><a href="https://h4ckyou.github.io/posts/ctf/uctf/writeup.html">Hack you</a>
 
 Thanks for reading!!!
