@@ -13,7 +13,7 @@ class xor(isHex):
         if super().checkHex(encText) is True:
            self.encText= bytes.fromhex(encText)
         else:
-            print("[+]The bytes is not in hex,provide the xor string in hex")
+            print("[+]The bytes are not in hex,provide the xor string in hex")
             exit()
     def singleByteBrute(self,flag_prefix: str):
         enc_text = self.encText.decode("utf-8")
