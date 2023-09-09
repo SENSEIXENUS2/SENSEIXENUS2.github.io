@@ -121,6 +121,6 @@ where it is hashed and compared against the hash provided and if the hashes are 
 Link to the script <a href="https://github.com/SENSEIXENUS2/s3nse1.github.io/blob/main/posts/ctf/UctfWriteups/captcha2.py">Captcha2's script</a>
 
 
-Link to my teammates(grepppp and hackyou)' writeup <a href="https://gr33pp.github.io/posts/urmia-ctf-2023/writeup">Greppp</a><P> <P><a href="https://h4ckyou.github.io/posts/ctf/uctf/writeup.html">Hack you</a>
+Link to my teammates(grepppp and hackyou)' writeup <a href="https://gr33pp.github.io/posts/urmia-ctf-2023/writeup">Greppp</a> <a href="https://h4ckyou.github.io/posts/ctf/uctf/writeup.html">Hack you</a>
 
 Thanks for reading!!!
