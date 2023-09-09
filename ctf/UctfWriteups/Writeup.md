@@ -83,8 +83,7 @@ I noticed that text in the image can be read with the aid of OCR(optical charact
 
 <img src="https://github.com/SENSEIXENUS2/s3nse1.github.io/blob/main/ctf/assets/Images/Uctf4.jpg" width="450" height="450">
 
-This is the link to the script <a href="https://github.com/SENSEIXENUS2/Ctf-writeupsScripts/blob/main/UctfWriteups/captcha1.py
-">Captcha1's script</a>
+This is the link to the script <a href="https://github.com/SENSEIXENUS2/s3nse1.github.io/blob/main/ctf/UctfWriteups/captcha1.py">Captcha1's script</a>
 ### Flag
 
 <img src='https://github.com/SENSEIXENUS2/s3nse1.github.io/blob/main/ctf/assets/Images/Uctf5.jpg' width="600" height="600">
@@ -119,7 +118,7 @@ where it is hashed and compared against the hash provided and if the hashes are 
 
 <img src="https://github.com/SENSEIXENUS2/s3nse1.github.io/blob/main/ctf/assets/Images/Uctfcaptcha2.jpg" width="600" height="600">
 
-Link to the script <a href="https://github.com/SENSEIXENUS2/Ctf-writeupsScripts/blob/main/UctfWriteups/captcha2.py">Captcha2's script</a>
+Link to the script <a href="https://github.com/SENSEIXENUS2/s3nse1.github.io/blob/main/ctf/UctfWriteups/captcha2.py">Captcha2's script</a>
 
 
 Link to my teammates(grepppp and hackyou)' writeup <a href="https://gr33pp.github.io/posts/urmia-ctf-2023/writeup">Greppp</a><P> <P><a href="https://h4ckyou.github.io/posts/ctf/uctf/writeup.html">Hack you</a>
