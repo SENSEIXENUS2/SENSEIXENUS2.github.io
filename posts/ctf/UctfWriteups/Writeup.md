@@ -69,7 +69,7 @@ e by using the vulnerable endpoint to access it via Curl.
 
 In this challenge,the main task was to solve 300 captchas to get the flag.
 
-<img src='https://github.com/SENSEIXENUS2/s3nse1.github.io/blob/main/posts/tf/assets/Images/Uctf3.jpg' width="450" height="450">
+<img src='https://github.com/SENSEIXENUS2/s3nse1.github.io/blob/main/posts/ctf/assets/Images/Uctf3.jpg' width="450" height="450">
 
 
 I noticed that text in the image can be read with the aid of OCR(optical character recognition).I created a script to autosolve it using python modules(pytessercat module,requests,base64).
@@ -102,7 +102,7 @@ I viewed the source code of the site and I noticed that images' names on the ser
 <img src="https://github.com/SENSEIXENUS2/s3nse1.github.io/blob/main/posts/ctf/assets/Images/Uctfcaptcha22.jpg" width="600" height="600">
 I copied the hash and pasted it in on Google and got this answer from a Hashlookup site.The dev created a sha-1 hash using the animal's name and used the hash as the picture's name.
 
-<img src="https://github.com/SENSEIXENUS2/s3nse1.github.io/blob/main/posts/tf/assets/Images/Uctfcaptcha23.jpg" width="600" height="600">
+<img src="https://github.com/SENSEIXENUS2/s3nse1.github.io/blob/main/posts/ctf/assets/Images/Uctfcaptcha23.jpg" width="600" height="600">
 
 You can recreate the hash by using python3 hashlib module.
 
