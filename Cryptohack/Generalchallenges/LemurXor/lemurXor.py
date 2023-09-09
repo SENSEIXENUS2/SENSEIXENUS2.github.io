@@ -29,7 +29,7 @@ class imageLoad:
       def submit2Flag(self,rgbVal: tuple,pos1: int,pos2: int):
           if rgbVal != "skip":
              self.flagPixels[pos1,pos2] = rgbVal
-             print(f"[+]Added values for {pos1}:{pos2}")
+             print(f"[+]Added RGBvalues for {pos1}:{pos2}")
           else:
               pass
       def flagSave(self):
