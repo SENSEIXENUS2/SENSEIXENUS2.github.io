@@ -1,11 +1,10 @@
-theme: hacker 
 <h1>Writeup for Uctf</h1>
 
 I played Uctf with the Cyber_jedi team.I solved three challenges.
 
 - E corp
-- Captcha | 1
-- Captcha | 2
+- Captcha-1
+- Captcha-2
   
 ### E-CORP
 <p>
