@@ -1,3 +1,4 @@
+theme: hacker 
 <h1>Writeup for Uctf</h1>
 
 I played Uctf with the Cyber_jedi team.I solved three challenges.
