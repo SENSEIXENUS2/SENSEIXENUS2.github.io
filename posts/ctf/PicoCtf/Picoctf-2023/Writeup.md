@@ -25,3 +25,25 @@
 # Flag
 
 ![Image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/blob/main/posts/ctf/assets/Images/Pico2023/regex3.jpg)
+
+# More Sqli
+
+![Image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/blob/main/posts/ctf/assets/Images/Pico2023/sqli0.jpg)
+
+<p>Task:Find the flag in the website</p>
+
+# Approach
+
+- I presumed that it will be sql injection since the name of the challenge is sqli and the hint says "SQLITE".
+<p>The website has a login page</p>
+
+![Image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/blob/main/posts/ctf/assets/Images/Pico2023/sqli2.jpg)
+
+<p>I tested the page text field with quote(') to trigger an sql error.I got this error</p>
+
+![Image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/blob/main/posts/ctf/assets/Images/Pico2023/sqli3.jpg)
+
+<p>To bypass the page,the payload should be sent with the password text field.I used the payload [' or 1=1--+] but I url-encoded it to use it via cURL.</p>
+
+# Flag
+![Image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/blob/main/posts/ctf/assets/Images/Pico2023/sqli1.jpg)
