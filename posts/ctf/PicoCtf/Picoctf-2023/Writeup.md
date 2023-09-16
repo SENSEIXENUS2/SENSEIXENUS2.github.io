@@ -43,7 +43,7 @@
 
 ![Image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/blob/main/posts/ctf/assets/Images/Pico2023/sqli3.jpg)
 
-<p>To bypass the page,the payload should be sent with the password text field.I used the payload [' or 1=1--+] but I url-encoded it to use it via cURL.</p>
+<p>The payload should be in the password text field to bypass the page.I used the payload [' or 1=1--+] but I url-encoded it to use it via cURL.</p>
 
 # Flag
 ![Image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/blob/main/posts/ctf/assets/Images/Pico2023/sqli1.jpg)
