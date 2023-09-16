@@ -1,2 +1,2 @@
-<! Doctype html>
-<head><h1></h1># Picoctf2023-writeups</h1></head>
+<!Doctype html>
+<head><h1>Picoctf2023-writeup</h1></head>
