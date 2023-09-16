@@ -30,7 +30,7 @@
 
 ![Image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/blob/main/posts/ctf/assets/Images/Pico2023/sqli0.jpg)
 
-<p>Task:Find the flag in the website</p>
+<p>Task:Find the flag on the website</p>
 
 # Approach
 
