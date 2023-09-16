@@ -20,7 +20,7 @@
 ![Image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/blob/main/posts/ctf/assets/Images/Pico2023/regex2.jpg)
 
 # Regex meaning
-  <p>The regex pattern matches any text with 7 characters but must start with small letter p and end with capital letter F to get the flag. </p>
+  <p>The regex pattern matches any text with 7 characters but the text must start with small letter p and end with capital letter F to get the flag. </p>
 
 # Flag
 
