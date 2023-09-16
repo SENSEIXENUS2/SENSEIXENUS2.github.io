@@ -1,8 +1,10 @@
-<!Doctype html>
 <head><h1>Picoctf2023-writeup</h1></head>
 <p>I played PicoCTF 2023 but I was too busy to document the way I solved the challenges.I played the ctf alone,these are the web challenges that I solved</p>
--  MatchtheRegex
--  More Sqli
+
+- MatchtheRegex
+- More Sqli
+- 
+
 
 # MatchtheRegex
 ![Image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/blob/main/posts/ctf/assets/Images/Pico2023/regex-1.jpg)
