@@ -24,3 +24,12 @@ The file url can be used to read files like /etc/passwd etc
 Challenge description: Read /etc/passwd by  exploiting XXE(XML External Entity)
 
 ![2023-10-18_14-29](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/ab0f3280-ed81-4eb6-9059-916666c14bc2)
+
+- I explored the site functionalities and I noticed that the site requests data was xml based.
+  
+![Uploading 2023-10-18_20-56.png…]()
+
+-I intercepted the check stock request with burpsuite.
+
+
+![Uploading 2023-10-18_20-59.png…]()
