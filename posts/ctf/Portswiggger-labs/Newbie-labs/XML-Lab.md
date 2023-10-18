@@ -113,6 +113,6 @@ Challenge description: Blind XXE by out-of-band interaction(Making a request to 
     
 ![2023-10-18_22-52](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/c0245328-7d0f-40fe-b614-a887d7a78dfa)
 
-- I noticed that a request has been made to burp collaborator
+- I noticed that a request has been made to burp collaborator,Challenge solved
 
 ![2023-10-18_22-55](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/211832e4-b1e8-42f3-966a-c410ba2c0ebc)
