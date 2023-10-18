@@ -43,7 +43,7 @@ Challenge description: Read /etc/passwd by  exploiting XXE(XML External Entity)
     
 - And I got this a response from the server showing the contents of the /etc/passwd file
   
-![2023-10-18_21-14![2023-10-18_21-14](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/6252eb19-98b1-4895-8fc0-1585b75c71ea)
+![2023-10-18_21-14](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/6252eb19-98b1-4895-8fc0-1585b75c71ea)
 
 - I right clicked on the repeater and showed response in browser and that was how I solved the first challenge
 
@@ -73,3 +73,7 @@ Challenge description: Exploiting XXE to get SSRF attacks
 
 ![2023-10-18_21-50](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/208c1e52-9adc-409d-a780-9b080b868849)
 
+### Challenge3
+Challenge description: Exploit Xinclude to retrieve file /etc/passwd
+
+![2023-10-18_22-04](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/6cdf1414-094c-48d2-a538-7626255a7b97)
