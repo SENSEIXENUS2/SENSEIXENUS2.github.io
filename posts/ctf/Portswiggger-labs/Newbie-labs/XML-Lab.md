@@ -19,6 +19,6 @@ The file url can be used to read files like /etc/passwd etc
 
 1st Challenge
 
-Challenge description: Read /etc/passwd by XXE(XML External Entity)
+Challenge description: Read /etc/passwd by  exploiting XXE(XML External Entity)
 
 ![2023-10-18_14-29](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/ab0f3280-ed81-4eb6-9059-916666c14bc2)
