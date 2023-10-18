@@ -77,3 +77,20 @@ Challenge description: Exploiting XXE to get SSRF attacks
 Challenge description: Exploit Xinclude to retrieve file /etc/passwd
 
 ![2023-10-18_22-04](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/6cdf1414-094c-48d2-a538-7626255a7b97)
+
+- I sent the check stock feature request to the repeater,I noticed that it was not in xml format but just plain POST data
+
+![2023-10-18_22-21](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/9c09b928-c8d3-47f6-aba5-73f661da373e)
+
+- I pasted this payload as the value of  the productID parameter
+
+      <foo xmlns:xi="http://www.w3.org/2001/XInclude">
+      <xi:include parse="text" href="file:///etc/passwd"/></foo>
+  
+- And I was able to read the contents of file /etc/passwd 
+
+![2023-10-18_22-26](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/8ca0c654-f7c7-4c90-9b23-f01e5e45dd7c)
+
+### Challenge 4
+
+Challenge Description:
