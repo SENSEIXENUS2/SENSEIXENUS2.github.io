@@ -13,7 +13,7 @@ For example
      <!DOCTYPE foo [ <!ENTITY myentity "my entity value" > ]>
 The value "my entity value" can be called with &myentity;
 ### Custom External entities
-  External entities will lead us to the first portswigger challenge.This form of custom entities are declared outside the declaration.The example given below uses the declaration SYSTEM which requires a value in url format e.g file:// url wrapper to load custom external entities.
+  External entities will lead us to the first portswigger challenge.This form of custom entities is declared outside the declaration.The example given below uses the keyword SYSTEM which requires a value in url format e.g file:/// url wrapper to load custom external entities.
 For example
 
      <!DOCTYPE foo [ <!ENTITY ext SYSTEM "file:///path/to/file" > ]>
