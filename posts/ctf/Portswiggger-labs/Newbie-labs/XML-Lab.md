@@ -67,4 +67,9 @@ Challenge description: Exploiting XXE to get SSRF attacks
 
 - I got this response
 
+![2023-10-18_21-37](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/6dda8f15-06c7-42f5-a078-ef7a4ce4521d)
+
+- Challenge solved
+
 ![2023-10-18_21-50](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/208c1e52-9adc-409d-a780-9b080b868849)
+
