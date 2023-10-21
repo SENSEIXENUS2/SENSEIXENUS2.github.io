@@ -146,8 +146,9 @@ Challenge's description: Exploiting blind XXE to exfiltrate data with malicious 
 
 - Then,I received this token through burp collaborator server.
 
-![2023-10-21_16-42](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/1865f097-e388-44b8-b035-116b77e3406c)
+![2023-10-21_17-02](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/98f96dbb-91ac-4468-8885-cb4c53bbf5d3)
 
 - I submitted the token and solved the challenge.
 
 ![2023-10-21_17-00](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/bedca5f4-4116-4f43-926e-ec874ca7cd9b)
+
