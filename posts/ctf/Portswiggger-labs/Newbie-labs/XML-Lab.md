@@ -1,4 +1,4 @@
-![2023-10-21_16-06](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/ce19025d-089d-4ec1-95bb-98d739550540)![2023-10-21_16-06](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/3d36b6f5-0bb0-4061-993c-cf02487ebdb4)### XML-INJECTION (Portswigger labs)
+### XML-INJECTION (Portswigger labs)
 
 
 ### <u>Meaning of XML injection </u>
