@@ -119,7 +119,7 @@ Challenge Description: Blind OS command injection with time delays
 - The goal of this challenge is to initiate a 10 seconds time delay.You can achieve it with bash 'sleep' function
 
        sleep 10
-- I used the payload to initiate time delays
+- I used the payload to initiate multiple time delay
 
       ;sleep${IFS}20;sleep${IFS}10;sleep${IFS}10;sleep${IFS}10;sleep${IFS}10
 
