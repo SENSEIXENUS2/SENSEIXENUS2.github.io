@@ -13,7 +13,7 @@
   
   If the user input is not properly sanitized,an attacker can close the first statement with a semi-colon(if linux) and execute another statement.
       
-      ┌──(sensei㉿kali)-[~]
+      ┌──(senzsei㉿kali)-[~]
       └─$ ./try.py
       Enter your ip address:;echo 'sleep'
       ping: usage error: Destination address required
