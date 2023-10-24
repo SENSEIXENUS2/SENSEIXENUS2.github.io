@@ -54,6 +54,10 @@ Challenge 2 description: Blind command injection with out of band exfiltration
 
  ![2023-10-24_14-49](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/ebbce3fd-b83d-47fd-be84-294500b5aa60)
 
+ - I used the payload of the last challenge to make a dns query to burp collaborator.
+
+       
+
 - Challenge solved
 
  ![2023-10-24_15-08](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/d3bf9ad4-7537-4243-aa13-66e7b422dcaa)
@@ -62,4 +66,12 @@ Challenge 2 description: Blind command injection with out of band exfiltration
 
 Challenge description: Blind OS command injection with out-of-band interaction
   
-![2023-10-24_15-16](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/eeb9ee81-696e-46df-9cee-ee8cc9fac515)
+  ![2023-10-24_15-16](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/eeb9ee81-696e-46df-9cee-ee8cc9fac515)
+
+- I used the payload of the last challenge to make a dns query to burp collaborator
+
+  ![2023-10-24_15-37](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/fbda2acf-bb9e-4035-8e0e-7bc4e7dfdd52)
+
+- Challenge solved
+
+  ![2023-10-24_15-40](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/0f401a1f-33f2-4bc8-993c-5bd005c84b03)
