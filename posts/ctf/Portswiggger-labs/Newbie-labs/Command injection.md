@@ -79,3 +79,33 @@ Challenge description: Blind OS command injection with out-of-band interaction
 - Challenge solved
 
   ![2023-10-24_15-40](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/0f401a1f-33f2-4bc8-993c-5bd005c84b03)
+
+### Challenge 4
+
+Challenge description: Blind OS command injection with output redirection
+
+ ![2023-10-24_15-54](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/ceedb1e0-ac2c-4910-8c84-b937bfa72b04)
+
+- The main goal of the challeenge is to redirect uur output to the writable folder "/var/www/images"
+- Intercept the feedback request and forward to the repeater
+
+  ![2023-10-24_16-51](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/c0a43bfb-3541-4357-a4c3-a6e68249df21)
+
+- Use this linux command to redirect whoami output to a file in /var/www/images
+
+        ;touch${IFS}/var/www/images/resullt.txt;whoami${IFS}>${IFS}/var/www/images/result.txt
+
+  ![2023-10-24_16-57](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/a0a1c81c-e08b-49cb-98cb-516778b9b206)
+
+- I noticed a particular link is vulnerable to Local File Include and be used to read local files
+
+      https://0a880060030a479a803ac6e800e000e5.web-security-academy.net/image?filename=result.txt
+
+- I redirected the output of /etc/passwd to result.txt and I got this output after visiting the link
+
+  ![2023-10-24_17-17](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/a3e4891c-aaf4-4c1d-8404-a36ac3aeb30a)
+
+-
+        
+  
+
