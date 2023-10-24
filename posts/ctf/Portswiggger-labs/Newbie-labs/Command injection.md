@@ -54,6 +54,15 @@ Challenge 2 description: Blind command injection with out of band exfiltration
 
  ![2023-10-24_14-49](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/ebbce3fd-b83d-47fd-be84-294500b5aa60)
 
- - Challenge solved
+- Challenge solved
+
+### Challenge 3:
+
+Challenge 3's description: Blind command injection with out-of-band interaction
 
  ![2023-10-24_15-08](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/d3bf9ad4-7537-4243-aa13-66e7b422dcaa)
+
+-  
+
+ ### Challenge 3:
+Challenge description:
