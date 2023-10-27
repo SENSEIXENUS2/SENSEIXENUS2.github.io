@@ -3,6 +3,7 @@
 
  ### Challenge 1
    Challenge type: crypto
+  
   ![2023-10-27_21-20](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/0cfec003-7559-4e12-9ed5-1e380baddb8f)
 
 - After opening the file on linux cli,I noticed that it was RSA and n,e,c was given.I wrote a script for it 
@@ -21,6 +22,7 @@
   
 ### Challenge 2
  Challenge type: crypto
+ 
  ![2023-10-27_21-36](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/4e5c49d2-5ab5-43fe-ad3a-8160e2e2eb4e)
 
 - At first,I auto solved with cyber-chef but I decided to make script on the challenge and also find out how it was solved.
