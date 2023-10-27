@@ -1,8 +1,8 @@
 ### QUESTON-CTF writeup
 
-   I played questcon ctf with a friend so I decided to make a writeup on the challenges.I solved different challeneges ranging from web,misc crypto to steg0.
+   I played questcon ctf with a friend so I decided to make a writeup on the challenges.I solved different challenges ranging from web,misc,crypto to steg0.
 
- ### Challenge 1
+### Challenge 1
  Challenge type: crypto
   
   ![2023-10-27_21-20](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/0cfec003-7559-4e12-9ed5-1e380baddb8f)
@@ -30,8 +30,9 @@
 
    ![2023-10-27_21-39](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/e2ad7e6d-fe1e-46f2-94de-cc8d922f9091)
 
-- I noticed that it was solved with Xor,I tried the single brute technique with python(pwntoools).I noticed that xoring with '3' produces a base64 encoded text.
+- I noticed that it was solved with Xor,I tried the single brute technique with python(pwntools).I noticed that xoring the ciphertext with '3' produces a base64 encoded text.
    
+      >>> from pwn import *
       >>> x = b'VUUEV2QGW364QGN3YE:MN16eUGMpaE:La2:VMDty`03>'
       >>> for i in range(256):
       ...     print(f"Key:{i}-{xor(x,i)}")
