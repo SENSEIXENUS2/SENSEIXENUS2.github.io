@@ -30,7 +30,7 @@
 
    ![2023-10-27_21-39](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/e2ad7e6d-fe1e-46f2-94de-cc8d922f9091)
 
-- I noticed that it was solved with Xor,I tried the single brute technique with python(pwntools).I noticed that xoring the ciphertext with '3' produces a base64 encoded text.
+- I noticed that it was solved with Xor,I tried the single byte bruteforce xor attack with python(pwntools).I noticed that xoring the ciphertext with '3' produces a base64 encoded text.
    
       >>> from pwn import *
       >>> x = b'VUUEV2QGW364QGN3YE:MN16eUGMpaE:La2:VMDty`03>'
