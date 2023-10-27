@@ -1,5 +1,4 @@
-   I played questcon ctf with my friends so I decided to make a writeup on the challenges.I solved different challeneges ranging from web,misc,
- crypto and steg0.
+   I played questcon ctf with a friend so I decided to make a writeup on the challenges.I solved different challeneges ranging from web,misc crypto to steg0.
 
  ### Challenge 1
    Challenge type: crypto
