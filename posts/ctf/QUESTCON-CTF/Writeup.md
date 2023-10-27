@@ -3,7 +3,7 @@
    I played questcon ctf with a friend so I decided to make a writeup on the challenges.I solved different challeneges ranging from web,misc crypto to steg0.
 
  ### Challenge 1
-   Challenge type: crypto
+ Challenge type: crypto
   
   ![2023-10-27_21-20](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/0cfec003-7559-4e12-9ed5-1e380baddb8f)
 
