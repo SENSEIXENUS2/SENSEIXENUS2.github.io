@@ -59,4 +59,77 @@
         └─$ ./riddle.py
          QUESTCON{D34d_M3n_T3ll_No_T4l3s}
   
+### Challenge 3:
+   Challenge description: misc 
+    
+   ![2023-10-31_18-11](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/ea5c8cca-3d19-4544-ad8f-95fe096e77ae)
+- The aim of the challenge was to find the port numbers and use a formula to find the answer.I automated it with python
+
+      #! /usr/bin/env python3
+      #Port numbers
+      whois = 43
+      qotd = 17
+      chargen = 19
+      xfer = 82
+      echo = 7
+      nntp = 119
+      nsca = 5667
+      dce = 135
+      #calculation
+      print(f"QUESTCON{{{((((whois + qotd) * chargen) - xfer) % echo) * (dce + nntp) * nsca}}}")
+- Script result
+
+      ┌──(sensei㉿kali)-[~/Documents/scripts]
+      └─$ ./seaofports.py
+      QUESTCON{1439418}
+
+### Challenge 4:
+ Challenge description: Steganography
+   ![2023-10-31_18-18](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/f99508ef-73c4-4982-b271-81a8cd6debcd
+   
+- The challenge contained an image
+  ![another_mystery](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/856ebc99-4da2-46c9-8a73-f532350e598f)
+
+- I used file linux utility to get the file type.It confirmed that it is a png file.
+  ![2023-10-31_18-22](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/599bcde5-06ec-4a45-9c50-d6093d60d42e)
+
+- I decided to try png file steganography technique.I tried stegolsb to check for least significant bit.I used this command
+
+        stegolsb steglsb -r -i another_mystery.png -n 2 -o output.txt
+    
+- Challenge solved
+
+      ┌──(sensei㉿kali)-[~/Downloads]
+      └─$ stegolsb steglsb -r -i another_mystery.png -n 2 -o output.txt
+      Files read                     in 0.90s
+      30 bytes recovered             in 0.00s
+      Output file written            in 0.00s
+
+      ┌──(sensei㉿kali)-[~/Downloads]  
+      └─$ cat output.txt
+      QUESTCON{P1raT3s_Ar3_M7s!3rY}
+
+![2023-10-31_18-30](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/1037554c-c807-43dc-a821-633a62636d85)
+### Challenge 4:
   
+   Challenge description: Web
+   ![2023-10-31_18-30](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/6eaa602f-100e-4d5d-9ee4-1be1f6984084)
+
+- The main aim of the challenge is to find Captain Jack sparrow's hidden treasure.I used curl to solve the challenge.
+
+- The first hurdle as to access the browser with a pirate browser
+
+  ![2023-10-31_18-34](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/6aa308d1-9722-47a0-9812-7f424a8013f3)
+
+- I bypassed it with the user-agent header because the user-agent header contains the browser information.
+
+      curl https://questcon-pirate-treasure.chals.io/ -H "User-agent: pirate"
+
+- The next hurdle is to be from the ship Black Perl.
+
+  ![2023-10-31_18-39](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/aba4135c-e0f0-449d-a87b-f9fbdc88dd2f)
+
+- I also passed this hurdle with the Referer header because it indicates the site that directed the user to tht site.
+
+        
+  -
