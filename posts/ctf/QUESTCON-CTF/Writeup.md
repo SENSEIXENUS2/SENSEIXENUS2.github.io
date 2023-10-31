@@ -125,11 +125,55 @@
 
       curl https://questcon-pirate-treasure.chals.io/ -H "User-agent: pirate"
 
-- The next hurdle is to be from the ship Black Perl.
+- The next hurdle is for the user to be from the ship Black Perl.
 
   ![2023-10-31_18-39](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/aba4135c-e0f0-449d-a87b-f9fbdc88dd2f)
 
-- I also passed this hurdle with the Referer header because it indicates the site that directed the user to tht site.
+- I also passed this hurdle with the Referer header because it indicates the site that directed the user to that site.
 
-        
-  -
+       curl https://questcon-pirate-treasure.chals.io/ -H "User-agent: pirate" -H "Referer: Black Perl"
+- The next hurdle is to identify yourself to get the treasure.I knew it was the cookie header but finding the cookie value  was a bit hard.My teammate Oxvip found it and solved it.
+
+  ![2023-10-31_18-50](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/40c33c89-9f77-4343-bfe7-61cd3ae35620)
+
+- I added the cookie value "user=jack sparrow" and got the flag.
+
+         curl https://questcon-pirate-treasure.chals.io/ -H "User-agent: pirate" -H "Referer: Black Perl" -H "Cookie: user=jack sparrow; expires=Thu, 30-Nov-2023 14:52:47 GMT; Max-Age=2592000; path=/"
+         <!DOCTYPE html>
+          <html lang="en">
+          <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>Pirate's Treasure Hunt</title>
+         <link rel="stylesheet" href="styles.css">
+         </head>
+         <body>
+         <div>QUESTCON{Thr33_k33p_a_s3cr3t_if_2_of_th3m_ar3_dead}</div></body>
+         </html>
+
+  ### Challenge 4:
+    Challenge description: web
+ ![2023-10-31_19-11](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/37878e98-733e-4eb4-a2f2-f75bc60a4f41)
+
+- The landing page signified "find the flag".
+
+  ![2023-10-31_19-13](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/3aa1966c-0b13-48ab-8257-6ad18fb5a0a8)
+
+- I decided to inspect the code and I noticed a string containing ASCII character codes.
+  
+  ![2023-10-31_19-16](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/fe45aa07-60b6-4f81-bb8a-64247e74741e)
+
+- I automated it with python and got the flag
+
+      ┌──(sensei㉿kali)-[~/Downloads]
+      └─$ python3
+      Python 3.11.5 (main, Aug 29 2023, 15:31:31) [GCC 13.2.0] on linux
+      Type "help", "copyright", "credits" or "license" for more information.
+      >>> flagencString = "81 85 69 83 84 67 79 78 123 87 51 66 95 51 88 80 76 48 82 51 82 95 49 83 95 52 87 51 83 48 77 51 125".split(" ")
+      >>> flag: str = ''.join(chr(int(char)) for char in flagencString)
+      >>> print(flag)
+      QUESTCON{W3B_3XPL0R3R_1S_4W3S0M3}
+
+  
+
+  
