@@ -111,10 +111,9 @@
       └─$ cat output.txt
       QUESTCON{P1raT3s_Ar3_M7s!3rY}
 
-![2023-10-31_18-30](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/1037554c-c807-43dc-a821-633a62636d85)
 ### Challenge 4:
-  
-   Challenge description: Web
+  Challenge description: Web
+   
    ![2023-10-31_18-30](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/6eaa602f-100e-4d5d-9ee4-1be1f6984084)
 
 - The main aim of the challenge is to find Captain Jack sparrow's hidden treasure.I used curl to solve the challenge.
@@ -180,8 +179,27 @@
   
 ### Last Challenge:
    Challenege description: web
-   ![2023-10-31_19-39](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/ecb8feb2-46da-437d-9823-daed9008d8e5)
+![2023-10-31_19-39](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/ecb8feb2-46da-437d-9823-daed9008d8e5)
 
+- I checked the ebsite functionality and noticed that it has an id parameter that takes in an hash.
+
+ ![2023-10-31_19-43](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/a4bd8ab6-e6d2-427d-bb49-0809113381e0)
+
+- I checked the hash on crackstation and I got a result stating that it is the sha224 value for '2'
+
+![2023-10-31_19-47](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/6ba82347-ef9d-4eb6-84f5-e2f0be93c0c5)
+
+- At first I thought the flag will be in one of the pages.Then,I noticed that id '3' was missing. I used hashlib to create an hash
+
+      ┌──(sensei㉿kali)-[~/Documents/scripts]
+      └─$ python3
+      Python 3.11.5 (main, Aug 29 2023, 15:31:31) [GCC 13.2.0] on linux
+      Type "help", "copyright", "credits" or "license" for more information.
+      >>> import hashlib
+      >>> hash = hashlib.sha224(b'3')
+      >>> hash.hexdigest
+      <built-in method hexdigest of _hashlib.HASH object at 0x7fe959585fd0>
+      >>> hash.hexdigest()
+      '4cfc3a1811fe40afa401b25ef7fa0379f1f7c1930a04f8755d678474'
+      >>> 
 - 
-   
-  
