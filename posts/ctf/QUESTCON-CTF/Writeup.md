@@ -202,4 +202,8 @@
       >>> hash.hexdigest()
       '4cfc3a1811fe40afa401b25ef7fa0379f1f7c1930a04f8755d678474'
       >>> 
-- 
+- It granted access to a page but it has a password.I remembered the secret key hint 'Barbossa' and I got the flag.
+
+![2023-10-31_19-55](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/106b7db8-f815-4a74-a9ea-ca7d99606f59)
+
+### Thanks for reading !!!!!!
