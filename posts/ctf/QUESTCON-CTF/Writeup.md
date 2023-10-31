@@ -85,10 +85,12 @@
 
 ### Challenge 4:
  Challenge description: Steganography
-   ![2023-10-31_18-18](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/f99508ef-73c4-4982-b271-81a8cd6debcd
+   
+   ![2023-10-31_18-18](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/f99508ef-73c4-4982-b271-81a8cd6debcd)
    
 - The challenge contained an image
-  ![another_mystery](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/856ebc99-4da2-46c9-8a73-f532350e598f)
+
+  ![2023-10-31_18-18](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/856ebc99-4da2-46c9-8a73-f532350e598f)
 
 - I used file linux utility to get the file type.It confirmed that it is a png file.
   ![2023-10-31_18-22](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/599bcde5-06ec-4a45-9c50-d6093d60d42e)
@@ -153,7 +155,8 @@
 
   ### Challenge 4:
     Challenge description: web
- ![2023-10-31_19-11](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/37878e98-733e-4eb4-a2f2-f75bc60a4f41)
+
+![2023-10-31_19-11](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/37878e98-733e-4eb4-a2f2-f75bc60a4f41)
 
 - The landing page signified "find the flag".
 
@@ -177,5 +180,8 @@
   
 ### Last Challenge:
    Challenege description: web
+   ![2023-10-31_19-39](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/ecb8feb2-46da-437d-9823-daed9008d8e5)
+
+- 
    
   
