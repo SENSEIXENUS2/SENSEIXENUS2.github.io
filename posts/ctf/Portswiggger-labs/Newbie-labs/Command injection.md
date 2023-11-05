@@ -1,7 +1,8 @@
+* * *
 ### Command injection(Portswigger labs)
 
 ### Command Injection vulnerability in web apps 
-   
+* * *   
    Command injection occurs when an attacker is able to execute shell commands(operating system commands) on a server.This vulnerability can compromise sensitive data and also help to grant access too an infrastructure.Below is an example of a vulnerable code snippet
    A website can decide to use the Linux ping utility to allow website visitors to ping ip addresses e.g
         
