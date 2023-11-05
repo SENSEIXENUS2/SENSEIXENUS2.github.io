@@ -2,7 +2,7 @@
  ### Access Control Vulnerabilty
 * *  *
 
-### Indirect Object Reference(IDOR)
+### Insecure Direct Object Reference(IDOR)
  It is form of access control vulnerability that occurs when an application uses user-controlled input to control object.It is a form of vertical access control and can lead to vertical privilege escalation.
 e.g
 - Website parameter access to object
