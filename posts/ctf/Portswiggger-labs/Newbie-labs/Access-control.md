@@ -1,0 +1,36 @@
+* * *
+ ### Access Control Vulnerabilty
+* *  *
+
+### Indirect Object Reference(IDOR)
+ It is form of access control vulnerability that occurs when an application uses user-controlled input to control object.It is a form of vertical access control and can lead to
+vertical privilege escalation.
+e.g
+- Website GET url
+  
+      https://insecure-website.com/customer_account?customer_number=132355
+
+- Direct access to static files
+
+      https://insecure-website.com/static/12144.txt
+### Challenge 1:
+  Challenge description:
+  
+![2023-11-05_18-17](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/83a09ffa-fd91-4bd0-85b5-bafde2c14bba)
+
+- The main aim of the chalenge is to access carlos text transcript
+
+  ![2023-11-05_18-19](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/1174c8de-bcb2-49e5-a419-af7fdb400b9e)
+    
+- I intercepted the download transcript request with burp and sent it to the repeater.In the response,I noticed a download path with a txt file.We can make a request to that url path
+and fuzz the number '3' digit to access other users chat.
+
+  ![2023-11-05_18-21](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/5e838bb4-b2c2-411d-86c8-fe191739016a)
+
+- I made a GET request to this url.
+
+       https://0aa9006a03e2f0ae8016da4d002c000f.web-security-academy.net/download-transcript/3.txt
+- And I intercepted with burp suite proxy
+
+   ![2023-11-05_18-29](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/fb079d0a-d62f-4c2a-b1f7-a387fa27ced3)
+
