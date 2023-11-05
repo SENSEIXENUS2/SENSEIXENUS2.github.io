@@ -41,7 +41,9 @@ e.g
  ![2023-11-05_18-36](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/52eb72ed-c2e5-453b-8077-447cf9efd922)
 
 - Challenge solved.
+
+  ![2023-11-05_18-44](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/1fa36540-572d-432a-8105-5ccad44e077c)
+
   
-  ![2023-11-05_18-37](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/8de13cba-1e56-449e-8887-d861ec4ad7bd)
 
    
