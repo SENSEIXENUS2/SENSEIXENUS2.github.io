@@ -30,8 +30,8 @@ e.g
        https://0aa9006a03e2f0ae8016da4d002c000f.web-security-academy.net/download-transcript/3.txt
 - And I intercepted with burp suite proxy
 
-   ![2023-11-05_18-29](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/fb079d0a-d62f-4c2a-b1f7-a387fa27ced3)
-
+  ![2023-11-05_18-29](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/4ed03260-4397-4f49-9e61-2879a2daf01f)
+ 
 - I sent the request to the intruder functionality of burp suite and used the numbers payload type to fuzz.
 
   ![2023-11-05_18-37](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/4af6df2e-abfe-4da7-880d-9e3deeb8a9fc)
