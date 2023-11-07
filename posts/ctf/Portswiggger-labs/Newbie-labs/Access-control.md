@@ -21,7 +21,19 @@
   
   ![2023-11-08_02-11](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/15dc1610-b752-4fec-9275-7762b8523ae4)
 
-   
+ ### Challenge 2:
+ Challenege description: Unprotected admin functionality with unpredictable URL
+
+   ![2023-11-08_02-15](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/a4046b26-d94a-4759-a035-57cf8f41c1fd)
+
+- In this challenge,the admin page is revealed in the source code and robots.txt is not available.
+
+  ![2023-11-08_02-17](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/44a3f966-5a19-4748-9d09-f9102a684509)
+
+- I accessed the page,deleted the user 'carlos'.Challenge solved
+
+   ![2023-11-08_02-18](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/643274f6-116f-4cb5-9c93-34c6d5c8d34f)
+
 ### Insecure Direct Object Reference(IDOR)
  It is form of access control vulnerability that occurs when an application uses user-controlled input to control object.It is a form of vertical access control and can lead to vertical privilege escalation.
 e.g
@@ -37,7 +49,7 @@ e.g
   
 ![2023-11-05_18-17](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/83a09ffa-fd91-4bd0-85b5-bafde2c14bba)
 
-- The main aim of the chalenge is to access carlos text transcript
+- The main aim of the chalenge is to access carlos' text transcript
 
   ![2023-11-05_18-19](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/1174c8de-bcb2-49e5-a419-af7fdb400b9e)
     
