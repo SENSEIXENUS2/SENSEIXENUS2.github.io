@@ -13,10 +13,12 @@
  
  ![2023-11-08_02-04](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/0d23173d-b9b9-4cbd-b15c-c506093e1548) 
 
-- Access the robots.txt file of the page and the "Disallow" part states administrator-panel
+- Access the robots.txt file of the page and the "Disallow" header disallows web crawler from finding administrator-panel
+  
   ![2023-11-08_02-08](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/86233fe6-8a2c-47fd-b8d9-27b3174ce3f9)
 
-- Making a request to the page will grant us access to the admin panel and with access to the panel.I deleted the user 'carlos' and solved the challenge
+- Making a request to the page will grant us access to the admin panel and with access to the panel I deleted the user 'carlos' and solved the challenge
+  
   ![2023-11-08_02-11](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/15dc1610-b752-4fec-9275-7762b8523ae4)
 
    
