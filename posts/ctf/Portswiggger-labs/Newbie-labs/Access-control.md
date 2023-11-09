@@ -34,6 +34,29 @@
 
    ![2023-11-08_02-18](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/643274f6-116f-4cb5-9c93-34c6d5c8d34f)
 
+### Challenge 3:
+  Parameter based access control
+  Some user access controls are determined with the aid of
+- Hidden values
+- Cookie
+- Preset query string
+  Challenge Description: User role controlled by request parameter
+   ![2023-11-05_18-29](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/45b0695b-d4b0-4707-953f-2a30fa6140bf)
+
+- Navigate to  /admin,you will notice an error message that you should login as an administrator
+
+ ![2023-11-09_17-15](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/097ed22e-2669-435b-a79c-ccbb5a7940ab)
+
+- Login into wiener's account,intercept the request with burp's proxy,forward it once and change the admin parameter to admin
+  
+  ![2023-11-09_17-11](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/458a5d27-12ec-401c-bd04-572d5b8046ba)
+
+- We now have access to the admin page.To delete the user 'carlos',you should also intercept the request and swithc thr admin parameter to "true".
+  ![2023-11-09_17-12](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/2c561778-4e79-4b7a-bdcd-ac43aeb60b74)
+
+- Challenge solved
+  ![2023-11-09_17-13](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/89a4821e-50c9-4ded-93d5-f6d5fbd51c15)
+
 ### Insecure Direct Object Reference(IDOR)
  It is form of access control vulnerability that occurs when an application uses user-controlled input to control object.It is a form of vertical access control and can lead to vertical privilege escalation.
 e.g
