@@ -50,4 +50,12 @@
       #specify the params
       params = {"a":"fb4cd6561b835e77a549381b106e66e2","b":"0ba5fb7b 38eb3acc&d94dea25#579e1d5d"}
       requests.get("http://127.0.0.1",params=params).content.decode()
-- 
+- Including form data with curl
+
+      curl 127.0.0.1 -d 'a=zzzzz'
+- Including formdata with python
+
+      import requests
+      data = {"a":"0db2d6ac267531b853cea7825d4c3452"}
+      requests.get("http://127.0.0.1",data=data).content.decode()
+-
