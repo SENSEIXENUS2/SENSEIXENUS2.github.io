@@ -11,7 +11,7 @@
 
       import requests
       requests.get("http://127.0.0.1").content.decode()
-- Setting host header with curl
+- Setting host header with curl 
 
        curl <url> -H "Host: <anychar>"
 - Using host header with python http request
@@ -19,4 +19,10 @@
       import requests
       headers = {"Host": "char"}
       request.get("url",headers= headers}
-- 
+- Setting path in curl
+    
+      curl 127.0.0.1/bla/bla/bla
+- setting path with python
+
+      import requests
+      requests.get("http://127.0.0.1/nla/bla/bla").content.decode()
