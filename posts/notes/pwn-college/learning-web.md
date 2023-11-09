@@ -32,5 +32,22 @@
 - Using url encoded path with python
 
       requests.get("http://127.0.0.1/95d89500%201ddf62f6/00df8f70%2057620caf").content.decode()
--
-    
+
+- Specifying an argument with curl
+
+       curl 127.0.0.1?a=127fd9f9203241480df743a842646d93
+
+- specifying an argument with requests python module
+
+       import requests
+       requests.get("http://127.0.0.1?a=9c7bd0be9e5100682c698e06309c5d7c").content.decode()
+- Specifying multiple arguments with curl
+
+      curl -G 127.0.0.1 --data-urlencode "a=fc295d34898d1428b3ee1a4e77c006ef" --data-urlencode "b=d8ba5854 328b10e3&5046ff16#4c3b542a"
+- Specifying multiple arguments with python
+
+      import requests
+      #specify the params
+      params = {"a":"fb4cd6561b835e77a549381b106e66e2","b":"0ba5fb7b 38eb3acc&d94dea25#579e1d5d"}
+      requests.get("http://127.0.0.1",params=params).content.decode()
+- 
