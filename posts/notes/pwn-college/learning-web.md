@@ -7,6 +7,16 @@
       curl www.google.com
 - Making HTTP request with nc
 
+      nc localhost 80
+      GET / HTTP/1.1
+
+      HTTP/1.1 200 OK
+      Server: Werkzeug/3.0.1 Python/3.8.10
+      Date: Mon, 13 Nov 2023 08:19:08 GMT
+      Content-Length: 58
+      Server: pwn.college
+      Connection: close
+
 - Making HTTP request with python requests module
 
       import requests
