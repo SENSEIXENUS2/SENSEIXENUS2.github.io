@@ -59,7 +59,17 @@
 - Using url encoded path with python
 
       requests.get("http://127.0.0.1/95d89500%201ddf62f6/00df8f70%2057620caf").content.decode()
+- Using urlencode path with nc
 
+      GET /0f463741%202ef8eb45/5f0ef982%20d1f779eb HTTP/1.1
+
+      HTTP/1.1 200 OK
+      Server: Werkzeug/3.0.1 Python/3.8.10
+      Date: Mon, 13 Nov 2023 08:51:33 GMT
+      Content-Length: 58
+      Server: pwn.college
+      Connection: close
+      
 - Specifying an argument with curl
 
        curl 127.0.0.1?a=127fd9f9203241480df743a842646d93
