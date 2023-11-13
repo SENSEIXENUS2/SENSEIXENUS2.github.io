@@ -73,11 +73,34 @@
 - Specifying an argument with curl
 
        curl 127.0.0.1?a=127fd9f9203241480df743a842646d93
+- Specifying an argument with nc
 
+      nc localhost 80
+      GET /?a=dcbcdd2e90096d09ffbe419bb7834bd7 HTTP/1.1
+
+      HTTP/1.1 200 OK
+      Server: Werkzeug/3.0.1 Python/3.8.10
+      Date: Mon, 13 Nov 2023 09:06:12 GMT
+      Content-Length: 58
+      Server: pwn.college
+      Connection: close
+  
 - specifying an argument with requests python module
 
        import requests
        requests.get("http://127.0.0.1?a=9c7bd0be9e5100682c698e06309c5d7c").content.decode()
+- Specifying multiple arguments with nc
+
+      nc localhost 80
+      GET /?a=c2bb4fdc1b23c61fc98efbb32e26111f&b=2656afe5%2016e8a17b%26e767498c%23031beb86 HTTP/1.1
+
+      HTTP/1.1 200 OK
+      Server: Werkzeug/3.0.1 Python/3.8.10
+      Date: Mon, 13 Nov 2023 09:01:56 GMT
+      Content-Length: 58
+      Server: pwn.college
+      Connection: close
+
 - Specifying multiple arguments with curl
 
       curl -G 127.0.0.1 --data-urlencode "a=fc295d34898d1428b3ee1a4e77c006ef" --data-urlencode "b=d8ba5854 328b10e3&5046ff16#4c3b542a"
@@ -90,6 +113,14 @@
 - Including form data with curl
 
       curl 127.0.0.1 -d 'a=zzzzz'
+- Including form data with nc
+
+      nc localhost 80
+      POST / HTTP/1.1
+      Content-Type: application/x-www-form-urlencoded
+      Content-Length: 34
+
+      a=cd9a0a241c1ef407f5c21363db4dfdb3                                
 - Including formdata with python
 
       import requests
