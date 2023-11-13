@@ -126,4 +126,7 @@
       import requests
       data = {"a":"0db2d6ac267531b853cea7825d4c3452"}
       requests.get("http://127.0.0.1",data=data).content.decode()
--
+- Including multiple arguments with curl
+
+      curl localhost:80 -d 'a=3177d16c7bdd39a040ed22e8e78fa94e&b=38cb5036 2589e771%269e2a9c5f%23c5152958'
+
