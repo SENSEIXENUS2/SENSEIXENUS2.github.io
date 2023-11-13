@@ -24,6 +24,19 @@
 - Setting host header with curl 
 
        curl <url> -H "Host: <anychar>"
+- Setiing host header with nc
+
+      nc localhost 80
+      GET / HTTP/1.1
+      Host: b1f260b6f57036da290401094fe52a9a
+
+      HTTP/1.1 200 OK
+      Server: Werkzeug/3.0.1 Python/3.8.10
+      Date: Mon, 13 Nov 2023 08:29:02 GMT
+      Content-Length: 58
+      Server: pwn.college
+      Connection: close
+
 - Using host header with python http request
 
       import requests
@@ -32,6 +45,10 @@
 - Setting path in curl
     
       curl 127.0.0.1/bla/bla/bla
+- Setting path with nc
+
+      nc localhost 80
+      GET /6927a3937537854a2639938f0bbee747 HTTP/1.1
 - setting path with python
 
       import requests
