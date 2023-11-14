@@ -129,4 +129,13 @@
 - Including multiple arguments with curl
 
       curl localhost:80 -d 'a=3177d16c7bdd39a040ed22e8e78fa94e&b=38cb5036 2589e771%269e2a9c5f%23c5152958'
+- Including multiple formdata with nc
+
+       nc localhost 80
+- Including multiple formdata with python
+
+       import requests
+       data = {"a":"55cbd1e34f0886e3e081d8289a832598","b":"f5cd1473 408dace5&0b5015a1#ae9e7e53"}
+       requests.post("http://127.0.0.1",data=data).content.decode()
+-
 
