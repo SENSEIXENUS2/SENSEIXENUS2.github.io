@@ -137,5 +137,14 @@
        import requests
        data = {"a":"55cbd1e34f0886e3e081d8289a832598","b":"f5cd1473 408dace5&0b5015a1#ae9e7e53"}
        requests.post("http://127.0.0.1",data=data).content.decode()
--
+- Making request with json data via curl
+  
+       curl 127.0.0.1:80 -H "Content-Type: application/json" -d '{"a":"1f977eb2be93af9168dd94806842ecc2"}'
+- Making json data requests with python
+
+      import requests
+      import json
+      data = {'a':'anychar'}
+      headers = {"Content-Type": "application/json"}
+      requests.get("http://127.0.0.1/",headers = headers,data = json.dumps(data))
 
