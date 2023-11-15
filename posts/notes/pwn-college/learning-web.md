@@ -147,4 +147,7 @@
       data = {'a':'anychar'}
       headers = {"Content-Type": "application/json"}
       requests.get("http://127.0.0.1/",headers = headers,data = json.dumps(data))
+- Sending complex json data with curl
+
+    
 
