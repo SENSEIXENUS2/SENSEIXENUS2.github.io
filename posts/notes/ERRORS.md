@@ -4,6 +4,11 @@
       sudo apt-get install default-jre libreoffice-java-common
 
 ### Virtualenv Runtime Error 
+   Example of error
+        
+         RuntimeError: failed to query /usr/bin/python2.7 with code 1 err: '  File "/usr/local/lib/python3.10/dist-packages/virtualenv/discovery/py_info.py", line 152\n    os.path.join(base_dir, exe) for exe in (f"python{major}", f"python{major}.{minor}")\n                                                           ^\nSyntaxError: invalid syntax\n'
+
+
    You need to downgrade virtual venv
 
       pip install virtualenv==20.21.1
