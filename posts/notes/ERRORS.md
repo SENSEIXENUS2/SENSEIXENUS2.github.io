@@ -12,3 +12,17 @@
    You need to downgrade virtual venv
 
       pip install virtualenv==20.21.1
+   Installing venv
+     
+      pip install virtualenv
+
+   Creating venv
+
+      virtualenv -p <path to python bin> <virtual env name>
+   Activating it
+
+     source <venv name>/bin/activate
+
+  Deactivating it
+
+      deactivate
