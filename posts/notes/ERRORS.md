@@ -26,3 +26,6 @@
   Deactivating it
 
       deactivate
+### Some index files failed to download. They have been ignored, or old ones used instead.
+
+      
