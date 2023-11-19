@@ -26,6 +26,15 @@
   Deactivating it
 
       deactivate
-### Some index files failed to download. They have been ignored, or old ones used instead.
+### Some index files failed to download. They have been ignored, or old ones used instead.(apt-key) errors
 
+      sudo apt-get install --reinstall coreutils
+
+### Fixing infinite login issue
+
+     use ctrl+alt+f1 to enter terminal mode
+     enter login details
+     locate .Xauthority
+     chown username:username /home/<username>/.Xauthority
+     reboot
       
