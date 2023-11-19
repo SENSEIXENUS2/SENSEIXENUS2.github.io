@@ -31,6 +31,7 @@
       sudo apt-get install --reinstall coreutils
 
 ### Fixing infinite login issue
+   The error occurs if .Xauthority ownership is assigned to root account and not to the user account
 
      use ctrl+alt+f1 to enter terminal mode
      enter login details
