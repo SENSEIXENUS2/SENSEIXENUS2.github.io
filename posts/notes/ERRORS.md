@@ -39,3 +39,6 @@
      chown username:username /home/<username>/.Xauthority
      reboot
       
+### some app icons broken due to gdk-pixbuf and svg 
+
+      sudo dpkg --configure -a
