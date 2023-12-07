@@ -38,8 +38,25 @@
 
   ![2023-12-07_17-57](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/6667bcbc-9fc1-498c-9d85-217c8622e4a9)
 
-     
-    
-    
+### Challenge 2:
+   Challenege description:  Web cache poisoning with an unkeyed cookie
+
+   ![2023-12-07_18-17](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/b17d8d9b-245a-4d20-b824-8483035c4909)
+
+- Intercept the host page with burpsuite
+  
+    ![2023-12-07_18-19](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/bd983372-f47c-4ff6-a62c-31d76a64d2b9)
+
+- Send to the repeater, the cookie param "fehost" is the vulnerable point, use this payload
+
+      }</script><script>alert(1)</script>
+- It reflect "1"
+
+  ![2023-12-07_18-23](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/473745a8-f646-4cb6-87f0-c237ab335a19)
+
+- Challenge solved
+
+  ![2023-12-07_18-24](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/0dbbea9c-470e-4a73-9640-127ebb778e58)
+
   
 
