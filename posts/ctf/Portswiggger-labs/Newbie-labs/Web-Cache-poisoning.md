@@ -50,7 +50,7 @@
 - Send to the repeater, the cookie param "fehost" is the vulnerable point, use this payload
 
       }</script><script>alert(1)</script>
-- It reflect "1"
+- It reflects "1"
 
   ![2023-12-07_18-23](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/473745a8-f646-4cb6-87f0-c237ab335a19)
 
