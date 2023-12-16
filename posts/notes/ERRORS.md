@@ -42,3 +42,8 @@
 ### some app icons broken due to gdk-pixbuf and svg 
 
       sudo dpkg --configure -a
+
+### Linux booting to initramfs mode 
+
+    fsck /dev/sda1
+         
