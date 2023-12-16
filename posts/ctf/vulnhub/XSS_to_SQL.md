@@ -49,7 +49,17 @@
 
     ![2023-12-14_18-26](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/78624310-3dde-4d6b-9386-bbf972262ea1)
 
-  
+- After testing every parameter,I noticed that "/admin/edit.php?id=2" is vulnerable to sql injection.I inserted a single colon after id=2.It displayed this error.
+
+    ![2023-12-17_00-14](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/02369116-bb11-43b4-a366-5304b3da161a)
+- I dumped the db and cracked the admin's hash with sqlmap
+
+   ![2023-12-17_00-20](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/6142908d-f8f9-422f-aa4a-3d7f93ea3e15)
+
+- Challenge solved
+
+  ![2023-12-17_00-21](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/7ef4ff46-af6e-4e10-be06-03579ed6bd43)
+
   
 
 
