@@ -19,5 +19,13 @@
 
    ![2023-12-21_17-58](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/4eead3b9-eed9-4444-bdf3-b88e19034aa5)
 
-- 
+- After opening the login page,I noticed this page query "http://192.168.184.130/index.php?page=login" and I tested for local file inclusion.It popped out this error.
+
+   ![2023-12-21_18-02](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/d18d08a7-e3d8-4ccd-a388-b4f017cbfef1)
+
+- The server was adding ".php" to the file and made it impossible to read files.I bypassed it with the null byte injection "%00" which excluded the ".php" extension added to the files.
+
+     ![2023-12-21_18-05](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/bdeb4db7-ed7f-41b8-8a2d-13ca197a08d4)
+
+-
     
