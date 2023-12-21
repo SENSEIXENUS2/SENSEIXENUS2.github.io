@@ -39,5 +39,6 @@
 
   ![2023-12-21_18-21](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/c79c3749-185b-428e-a431-786b9bbfb455)
 
-- 
-    
+- I accessed the shell via path traversal and executed shell commands.Challenge solved
+    ![2023-12-21_19-47](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/23cf69cf-dac5-4dc4-bb2f-23ac2ee261db)
+
