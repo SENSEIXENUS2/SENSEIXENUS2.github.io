@@ -1,4 +1,4 @@
-* * *
+![2023-12-23_23-21](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/31438e22-6795-4220-8a37-9a52d44693f3)* * *
 ### WEB-CACHE-POISONING
 * * *
 
@@ -59,4 +59,38 @@
   ![2023-12-07_18-24](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/0dbbea9c-470e-4a73-9640-127ebb778e58)
 
   
+### Challenge 3: 
+
+  ### Web cache poisoning with multiple headers
+
+  ![2023-12-23_22-37](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/592d26b1-9c35-46d0-8494-2d382116b8df)
+
+- I intercepted the webpage request with burpsuite and checked the http history, I noticed that  this js file is being cached by the content delivery network.
+
+  ![2023-12-23_22-52](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/29983f5f-7ed9-4dc2-ba56-230444dbbb1f)
+
+- I fuzzed for headers with param miner burp extension, it spotted only X-Forward-Scheme and I also decided to test X-forwarded-host and it worked.X-forwarded-Scheme specifies " Specifies the scheme the client uses to make the request, such as “HTTP” or “HTTPS" " while X-forwarded-Host specifies the host requested by the client
+
+ ![2023-12-23_23-01](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/6a452118-b253-4a3d-af79-498c962a1540)
+
+- Go to the exploit server,enter the payload "alert(document.cookie);", change the file value to "/resources/js/tracking.js" and store the exploit.The main goal is to force the Content Delivery Network to cache the malicious javascript file instead of the normal js file.
+
+ ![2023-12-23_23-28](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/e464bfda-6944-41fc-ac6a-af1e2d3ffdae)
+
+
+- Change the value of x-forwarded-scheme to "http" and the value of x-forwarded-host to "exploit-0afa009b0457332185b93e1a016100f6.exploit-server.net" before sending to the server
+
+   ![2023-12-23_23-21](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/14bf8564-54b9-4652-969f-277e1a72f173)
+
+- The CDN has cached our malicious url
+
+  ![2023-12-23_23-26](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/fc085553-2346-4fd7-8eed-6c39113b3bee)
+
+- When a user opens the url "https://exploit-0afa009b0457332185b93e1a016100f6.exploit-server.net/resources/js/tracking.js",it redirects the user to our cached malicious page
+
+    ![2023-12-23_23-57](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/2f4239c1-9f1e-406f-bf9c-f8134c09414d)
+
+-   
+    
+
 
