@@ -75,5 +75,4 @@ sudo install -m =xs $(which python) .
    ![2023-12-25_04-14](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/396ee395-f030-4ec5-9337-845c7200b580)
 
    
-  
-- 
+ 
