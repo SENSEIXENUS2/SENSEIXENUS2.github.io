@@ -74,6 +74,20 @@ e.g
 
 - Navigate to "my account",update the email value and intercept with burpsuite
 
+  ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/77083798-aae8-4240-88b7-52b4aaf63504)
+
+- Add a new json parameter of "roleid:2 to the request body and forward the request,now you have admin powers
+
+  ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/3d7b115a-3064-4446-96a4-17e94e98b53a)
+
+- Delete Carlos role
+   
+   ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/7acb0da4-07cd-4762-be3a-7b77972666a0)
+
+- Challenge solved
+
+   ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/5efabe22-d1ad-4428-a3c8-13f08f25d5d4)
+
 ### Challenge 5:
    Challenge description:
    ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/9f0a261e-9d08-4ab6-8b9d-f148f95098e3)
@@ -94,7 +108,7 @@ e.g
 
   ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/61355f21-b081-4f2c-86fc-d2e185fa7cc0)
 
-### Challenges 3:
+### Challenges 6:
   Challenge description: User ID controlled by request parameter, with unpredictable user IDs
 
   ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/7aefe6c6-33a2-48b9-a292-d609adeac114)
@@ -115,7 +129,7 @@ e.g
 
    ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/cba9b614-667f-4d24-9f7a-f0197a0e1fe1)
 
-### Challenge 1:
+### Challenge 7:
   Challenge description:
   
 ![2023-11-05_18-17](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/83a09ffa-fd91-4bd0-85b5-bafde2c14bba)
