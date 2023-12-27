@@ -67,6 +67,33 @@ e.g
 - Direct access to static files
 
       https://insecure-website.com/static/12144.txt
+### Challenge 4: 
+ Challenge Description: User role can be modified in user profile
+
+  ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/6053e0d0-c542-43e7-8b17-acfa0e573b9e)
+
+- Navigate to "my account",update the email value and intercept with burpsuite
+
+### Challenge 5:
+   Challenge description:
+   ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/9f0a261e-9d08-4ab6-8b9d-f148f95098e3)
+   
+- Navigate to my account
+
+  ![2023-12-27_18-44](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/bf906e43-af21-4065-8d5a-b04f98caa70c)
+
+- Intercept the request with burpsuite and send to burpsuite repeater
+
+  ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/1511ce0c-2d3d-4748-aada-d2ffef7b62da)
+
+- Change the value of parameter "id" to "carlos",the response will reveal Carlos' details
+
+   ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/463ad044-70df-4796-8cf2-006514bb4a21)
+
+- Now we can submit Carlos' key and complete the challenge
+
+  ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/61355f21-b081-4f2c-86fc-d2e185fa7cc0)
+
 ### Challenge 1:
   Challenge description:
   
