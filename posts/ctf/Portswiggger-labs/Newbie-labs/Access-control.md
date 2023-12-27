@@ -2,7 +2,7 @@
  ### Access Control Vulnerabilty
 * *  *
 ### Broken Accesss Control
- Access control is the constraints on who is able to access a resources or perform a specific action.It depends on authentication and session management
+ Access control refers to constraints on who is able to access a resources or perform a specific action.It depends on authentication and session management
 ### Types
 - Vertical access control
 - Horizontal access control
@@ -93,6 +93,27 @@ e.g
 - Now we can submit Carlos' key and complete the challenge
 
   ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/61355f21-b081-4f2c-86fc-d2e185fa7cc0)
+
+### Challenges 3:
+  Challenge description: User ID controlled by request parameter, with unpredictable user IDs
+
+  ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/7aefe6c6-33a2-48b9-a292-d609adeac114)
+
+- Navigate to the home page,look for a post made by the user "carlos"
+
+  ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/3097d76a-4fbe-43a4-ad38-56cf4554d8d3)
+
+- Click on the user "carlos",the url reveals the "userid"|"guid" of carlos
+
+   ![2023-12-27_21-48](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/7bfdf473-c54f-4224-a6a7-dc1794c20285)
+
+- Login to wiener's account,replace the my-account's guid of Wiener with Carlos' guid and gain access to Carlos' account
+
+  ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/9a9ca01b-c0fe-4fdf-9208-b88dab980c3d)
+
+- Submit the api key and solve the challenge
+
+   ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/cba9b614-667f-4d24-9f7a-f0197a0e1fe1)
 
 ### Challenge 1:
   Challenge description:
