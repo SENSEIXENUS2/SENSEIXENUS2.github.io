@@ -27,5 +27,20 @@ Test it after url-encoding it “'%22%60%7b%0d%0a%3b%24Foo%7d%0d%0a%24Foo%20%5cx
 ### Challenge 1: 
    Challenge description: Detecting NoSQL injection
 
+   ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/45956f80-b864-4302-92a5-d1eea81508e9)
    
--
+- Navigate to one of the categories
+
+   ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/ebba3b23-4393-4280-a865-52b5d7dc2253)
+
+- Test the category query with one of true or false statements, the true statement worked lifestyle' || '1'=='1 and displayed all the unreleased products
+
+  ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/01fcb6c5-5836-4e0d-9fb9-c1304bc7126f)
+
+- Challenge solved
+
+   ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/80f9ecfe-facf-4905-b99d-8d0d6720372c)
+
+### Challenge 2:
+  Challenge description:
+   
