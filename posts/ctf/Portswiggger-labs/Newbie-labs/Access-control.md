@@ -162,5 +162,27 @@ e.g
   ![2023-11-05_18-44](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/1fa36540-572d-432a-8105-5ccad44e077c)
 
   
+### Challenge 7: 
+   Challenge description: URL-based access control can be circumvented
 
-   
+   ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/4cd10d57-a2a7-4d9a-adac-3a13f80d4702)
+
+- Intercept "/" with burp suite, add the header "X-Original-Url: /admin" and send to the repeater.
+
+  ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/f994832f-1a92-465b-a5fa-79aa66e60207)
+
+- Forward the request,now we have access to the admin panel
+
+  ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/121bce98-dcf4-47d6-b107-3dc2198b5c46)
+
+- Delete a user and intercept it with burpsuite,send to the repeater,copy the directory "/admin/delete" and add to "X-Original- Url: /admin/delete" and add 'username=carlos" to the request body
+
+ ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/8853bcde-9940-40f6-817c-cf6693db20ba)
+
+- Send to the repeater and follow the redirection,we also have to edit the next request, X-Original-Url should contain only admin.Now we have bypassed the 403 error and deleted a user,show the response in browser
+
+    ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/d01e6784-90a9-4482-91bd-018a9c8ab18e)
+
+- Challenge solved
+
+  ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/fa336b41-8ae7-4986-b57a-500dcb0cdffa)
