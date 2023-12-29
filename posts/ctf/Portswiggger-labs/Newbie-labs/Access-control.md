@@ -186,3 +186,20 @@ e.g
 - Challenge solved
 
   ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/fa336b41-8ae7-4986-b57a-500dcb0cdffa)
+
+### Challenge 8:
+   Challenge Description: User ID controlled by request parameter with data leakage in redirect 
+
+   ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/1cbafbd5-67a5-42f6-8c6e-57b7b07f1fed)
+
+- Log into "wiener's account",incercept the account info page,change the parameter to carlos
+
+  ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/3927c4f7-4799-44fe-8884-95207c206ff8)
+
+- Send to the repeater and initiate a request,it will trigger a redirection leaking carlos' api key
+
+  ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/3ee37ee5-79d7-4695-82a2-9a5d146871bf)
+
+- Challenge solved
+
+   ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/c53b3c24-8953-44f2-86e5-c3830809700b)
