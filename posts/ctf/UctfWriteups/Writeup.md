@@ -7,9 +7,9 @@ I played Uctf with the Cyber_jedi team.I solved three challenges.
 - Captcha-2
   
 ### E-CORP
-<p>
-  <img src="https://github.com/SENSEIXENUS2/s3nse1.github.io/blob/main/posts/ctf/assets/Images/Uctf.jpg" width="800" height="800" />
-</p>  
+
+ ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/4a7787e9-13b7-4b7d-a62b-5c2aa7537d60)
+
      In this web challenge,the website allows access to posts made by users.So,I viewed the source code and discovered a vulnerable code snippet in the api endpoint <u>'/api/view.php'</u> code.The main task in the challenge is to load a website that can't be accessed outside i.e if not connected to their network
 The vulnerable code snippet is
 
@@ -65,12 +65,11 @@ e by using the vulnerable endpoint to access it via Curl.
 ###  CAPTCHA | 1
 
 
-<img src='https://github.com/SENSEIXENUS2/s3nse1.github.io/blob/main/posts/ctf/assets/Images/Utcf2.jpg' width= "800" height="800">
+![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/d4727e88-fc5b-45a2-bcf1-b88c35dc4ab8)
 
 In this challenge,the main task was to solve 300 captchas to get the flag.
 
-<img src='https://github.com/SENSEIXENUS2/s3nse1.github.io/blob/main/posts/ctf/assets/Images/Uctf3.jpg' width="800" height="800">
-
+![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/e479126f-3992-41e4-b65c-80318ea0d37b)
 
 I noticed that text in the image can be read with the aid of OCR(optical character recognition).I created a script to autosolve it using python modules(pytessercat module,requests,base64).
 ### My Approach
@@ -81,32 +80,34 @@ I noticed that text in the image can be read with the aid of OCR(optical charact
 - Used Pytesseract to extract the text from the png image
 - Used a class function to submit the captcha value
 
-<img src="https://github.com/SENSEIXENUS2/s3nse1.github.io/blob/main/posts/ctf/assets/Images/Uctf4.jpg" width="800" height="800">
+![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/53bb8258-1fe7-4283-88bd-1b741da3d621)
 
 This is the link to the script <a href="https://github.com/SENSEIXENUS2/s3nse1.github.io/blob/main/posts/ctf/UctfWriteups/captcha1.py">Captcha1's script</a>
 ### Flag
 
-<img src='https://github.com/SENSEIXENUS2/s3nse1.github.io/blob/main/posts/ctf/assets/Images/Uctf5.jpg' width="800" height="800">
-
+![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/792c2ae1-b0b4-40ab-9b8b-5c0211f1e47e)
 
 ### Captcha | 2
-<img src= "https://github.com/SENSEIXENUS2/s3nse1.github.io/blob/main/posts/ctf/assets/Images/Uctfcaptcha20.jpg" width="800" height="800">
+![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/bc0aee7c-03c0-4f3d-bb98-5204644d6982)
 
 
 In this challenge,the task was to submit 100 captchas but it was different this time because the captcha pictures were replaced with images stored on the server and the images contained pictures of an animal and can't be read with OCR
 
-<img src ="https://github.com/SENSEIXENUS2/s3nse1.github.io/blob/main/posts/ctf/assets/Images/Uctfcaptcha21.jpg" width="800" height="800">
+![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/57ef689d-77c7-49e1-a5bf-7c225118f85c)
 
 I viewed the source code of the site and I noticed that images' names on the server were in hash format.
 
-<img src="https://github.com/SENSEIXENUS2/s3nse1.github.io/blob/main/posts/ctf/assets/Images/Uctfcaptcha22.jpg" width="800" height="800">
+![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/9bdcc9cf-24c5-44b8-908b-46da5b4a515f)
+
 I copied the hash and pasted it in on Google and got this answer from a Hashlookup site.The dev created a sha-1 hash using the animal's name and used the hash as the picture's name.
 
-<img src="https://github.com/SENSEIXENUS2/s3nse1.github.io/blob/main/posts/ctf/assets/Images/Uctfcaptcha23.jpg" width="800" height="800">
+![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/17464781-1cce-4466-821d-3b5db40ee582)
+
 
 You can recreate the hash by using python3 hashlib module.
 
-<img src="https://github.com/SENSEIXENUS2/s3nse1.github.io/blob/main/posts/ctf/assets/Images/Uctfcaptcha24.jpg" width="800" height="800">
+![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/4c58ab58-c8af-4f7b-9a4f-65ac057be9b0)
+
 
 I created a python script to automate the whole process and collect the flag.I used python modules(hashlib,requests and re)
 ### Code summary
@@ -116,7 +117,7 @@ where it is hashed and compared against the hash provided and if the hashes are 
 
 ### Script result and flag
 
-<img src="https://github.com/SENSEIXENUS2/s3nse1.github.io/blob/main/posts/ctf/assets/Images/Uctfcaptcha2.jpg" width="800" height="800">
+![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/8edc3592-4145-46cd-8f8e-ab419dbd1499)
 
 Link to the script <a href="https://github.com/SENSEIXENUS2/s3nse1.github.io/blob/main/posts/ctf/UctfWriteups/captcha2.py">Captcha2's script</a>
 
