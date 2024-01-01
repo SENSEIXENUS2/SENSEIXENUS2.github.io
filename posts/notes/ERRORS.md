@@ -47,3 +47,7 @@
 
     fsck /dev/sda1
          
+### ImportError: cannot import name 'ParameterSource' from 'click.core'
+
+     sudo apt purge python3-click
+     sudo pip install click==8.1.6
