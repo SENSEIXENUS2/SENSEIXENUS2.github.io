@@ -1,6 +1,6 @@
 * * *
-  HTTP Host Header injection 
-  Labs: Portswigger
+  ### HTTP Host Header injection 
+  ### Lab: Portswigger
 * * *
 
 ### Challenge 1:
