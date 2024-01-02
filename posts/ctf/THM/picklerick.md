@@ -19,7 +19,7 @@
   ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/a433b0a4-337a-4980-b65e-78e8b816b1ea)
 
 
-- Viewing the source of the source page reveals a username
+- Viewing the source of the index page reveals a username
 
   ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/b6c9a89d-9eed-4c82-8e93-e8ef4be40a94)
 
