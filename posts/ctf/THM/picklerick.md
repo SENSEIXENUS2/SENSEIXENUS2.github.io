@@ -65,7 +65,6 @@
 
     ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/fec592d4-7327-4efa-b615-ca3d1a7fe77f)
 
-
    
   
 -
