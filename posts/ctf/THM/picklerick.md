@@ -27,7 +27,7 @@
 
    ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/a634be9f-cbb6-45fd-9355-88500f0fbaa4)
 
-- I logged in with the username and password <the weird word> which reveals a php page for shell commands execution
+- I logged in with the username and password <the weird word> which reveals a php page for shell commands execution and the picture below provides the result of executing 'ls'
 
   ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/341db42e-b00e-4602-b9bb-1d0eee1c2484)
 
@@ -43,7 +43,7 @@
 
    ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/165012d2-7b95-4341-81d6-1f569183ca1a)
 
-- After multiple trial and error,I discovered with gtfoins that I can escalate privileges with su
+- After multiple trial and error,I discovered with gtfobins that I can escalate privileges with su
 
   ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/b7d4942a-53d2-421d-be12-3c57a73b32c7)
 
