@@ -36,6 +36,24 @@
 
 ### Cracking the hash with John
 
+- Use "john --show <hashfile> to show password after cracking
 
+  ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/1109564d-67ad-4e72-8664-5de5ddfc4dd2)
 
---
+- To crack use
+
+      john <hashfile> --wordlist=<wordlist path>
+
+ ### Extracting the archive
+
+ - Extract the tar file with this command with this command
+
+       tar -xvf <path to tar file>
+
+   ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/6671c59a-b66a-450a-8e03-8221a9c9bdeb)
+
+- The README file states that the file is a borg backup repository
+
+  ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/c245e340-dbb5-4fca-8532-225c999f6b1c)
+
+-     
