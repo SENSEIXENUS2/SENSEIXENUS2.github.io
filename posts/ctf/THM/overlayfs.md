@@ -36,6 +36,7 @@
   ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/a84ea6f1-00ff-4e23-b687-988a940093be)
 
 - Root access
+
   ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/3ea1d401-5b9a-4013-83bd-ed7408d7aacb)
  
 - Challenge solved  
