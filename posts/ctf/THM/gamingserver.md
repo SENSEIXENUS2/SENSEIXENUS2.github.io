@@ -27,7 +27,7 @@
 
 ### Gaining access
 
-- Get the hash for the ssh privtate key with ssh2john.py and crack with john
+- Get the hash for the ssh private key with ssh2john.py and crack with john
 
   ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/34575332-5c68-4941-aa99-031345eda8c8)
 
