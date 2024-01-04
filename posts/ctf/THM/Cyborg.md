@@ -26,7 +26,7 @@
   ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/d0ebf82a-00e1-4ee0-8286-9c19cfe0124d)
 
 ### Important details  
-- The admin's index.html page reveals the existence of a music archive file which I later discvered to be this "archive.tar" file
+- The admin's index.html page reveals the existence of a music archive file which I later discovered to be this "archive.tar" file
 
   ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/e3726184-5caf-492d-b98d-7e06f1fca510)
 
