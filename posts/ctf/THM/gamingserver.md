@@ -41,7 +41,7 @@
   
 ### Privilege escalation
 
-- The Ubuntu version (UBUNTU 18.0.4.4 LTS) has a kernel exploit (overlayfs).I sent the exploit binary to the tatget machine with python http.server,compiled and changed the binary's permission.
+- The Ubuntu version (UBUNTU 18.0.4.4 LTS) has a kernel exploit (overlayfs).I sent the exploit binary to the target machine with python http.server,compiled and changed the binary's permission.
 
   ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/5e145fa4-1707-4c1a-8292-160f6645455e)
 
