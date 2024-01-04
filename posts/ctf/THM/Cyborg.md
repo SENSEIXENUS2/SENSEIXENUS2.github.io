@@ -92,4 +92,9 @@
 
 - We can use it to escalate privileges or read "root.txt"
 
+  ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/6b18ef20-0d0d-4310-aa16-2ce95f0dec5f)
+
   
+- Challenge solved
+
+   ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/175e188e-d56d-40ac-ad48-c0f4f84941b2)
