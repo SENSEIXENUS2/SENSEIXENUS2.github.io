@@ -29,7 +29,7 @@
   ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/484c2e97-2f61-4508-b162-ab342f94c79e)
 
 - Add the token to "https://0abb00d5043a44e681fa4164009600f1.web-security-academy.net/forgot-password?temp-forgot-password-token=",
-  load the url,change the Carlos' password and log in into Carlos' account.Challenged solved
+  load the url,change the Carlos' password and log in into Carlos' account.Challenge solved
 
   ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/3f2deed0-04ef-4310-9234-a16760a1b29d)
 
