@@ -11,4 +11,12 @@
 - Ubuntu 16.04 LTS
 - Ubuntu 14.04 ESM
 
-- <a href="">Link to exploit</a>
+- <a href="https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/blob/main/posts/ctf/THM/Compiled%20exploits/overlayfs">Link to exploit</a>
+
+   The exploit is well explained in <a href="https://ssd-disclosure.com/ssd-advisory-overlayfs-pe">ssd disclosure</a>
+
+### ROOM
+
+- Access the server via ssh
+
+  
