@@ -9,7 +9,7 @@
 
   ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/26b330d0-1935-4add-bf3b-fd02405e16ff)
 
-- Fuzzing for directory with ffuf
+- Fuzzing for directories with ffuf
 
   ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/dc77577a-9dc4-43d4-b34d-793aa40fdd2e)
   
