@@ -52,8 +52,16 @@
 
    ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/6671c59a-b66a-450a-8e03-8221a9c9bdeb)
 
-- The README file states that the file is a borg backup repository
+- The README file states that the file is a borg backup repository,we can extract the archive with this binary "borg"
 
   ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/c245e340-dbb5-4fca-8532-225c999f6b1c)
 
--     
+- List the archive with this command
+   
+       borg list --json /path/to/repository
+
+  ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/ba24dcd7-129b-461d-bd77-36aaebeb7c7c)
+
+- Extract the archive with this command
+
+  
