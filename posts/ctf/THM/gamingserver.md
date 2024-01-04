@@ -23,7 +23,28 @@
 
 - 'Secret' contains a private ssh key
 
+  ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/b3de4bf6-1f59-4afe-bf7b-c1cbf936a430)
+
+### Gaining access
+
+- Get the hash for the ssh privtate key with ssh2john.py and crack with john
+
+  ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/34575332-5c68-4941-aa99-031345eda8c8)
+
+- Change the permissions on the sshkey with this command
+
+      chmod 600 <ssh key>
+- Ssh access
   
+  ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/bd6b009f-82eb-442a-8e56-1fa07982ffb9)
+
+  
+### Privilege escalation
+
+- The Ubuntu version (UBUNTU 18.0.4.4 LTS) has a kernel exploit (overlayfs).I sent the exploit binary to the tatget machine with python http.server,compiled and changed the binary's permission.
 
   ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/5e145fa4-1707-4c1a-8292-160f6645455e)
+
+- Root access
+
   ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/013ef35f-45b7-4035-bd9a-41ad93307181)
