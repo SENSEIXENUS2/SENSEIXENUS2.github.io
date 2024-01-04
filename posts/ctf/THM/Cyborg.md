@@ -26,4 +26,16 @@
   ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/d0ebf82a-00e1-4ee0-8286-9c19cfe0124d)
 
 ### Important details  
- 
+- The admin's index.html page reveals the existence of a music archive file which I later discvered to be this "archive.tar" file
+
+  ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/e3726184-5caf-492d-b98d-7e06f1fca510)
+
+- The /etc on the other hand contains an hash file which after cracking it will be the password for the archive
+
+  ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/4f0ac2c1-78ed-4f37-a8cb-3857f0b0787f)
+
+### Cracking the hash with John
+
+
+
+--
