@@ -62,6 +62,34 @@
 
   ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/ba24dcd7-129b-461d-bd77-36aaebeb7c7c)
 
-- Extract the archive with this command
+- Extract the archive with this command,--list is for verbosity
+
+       borg extract --list <repo path>::<archive_name>
+  
+  ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/34555d0b-b9dc-427b-85d2-cdd61cfe32f5)
+
+- I spotted 2 files that might contain sensitive info
+
+  ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/9e7f9888-520d-4636-ad69-a37acebab7e1)
+
+- "Note.txt" contains credentials for ssh
+
+  ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/504f4020-ccbb-4824-b85c-c1ae77900c8f)
+
+- Ssh access
+
+   ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/d14c0e8f-f8dd-463d-b294-d64e83dcf666)
+
+### Privilege escalation
+
+- "sudo -l" reveals a bash script that has access to sudo without need for a password
+
+  ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/1400aeba-e953-42d9-a653-2b2b866aaff1)
+
+- Reading the source code reveals that it takes in "-c" flag and execute the input as a shell command
+
+  ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/4f132045-ffde-4c00-9578-a513a51e01b2)
+
+- We can use it to escalate privileges or read "root.txt"
 
   
