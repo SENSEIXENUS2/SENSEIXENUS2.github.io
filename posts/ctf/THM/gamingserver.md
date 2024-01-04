@@ -31,7 +31,7 @@
 
   ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/34575332-5c68-4941-aa99-031345eda8c8)
 
-- Change the permissions on the sshkey with this command
+- Change the sshkey's permissions  with this command
 
       chmod 600 <ssh key>
 - Ssh access
