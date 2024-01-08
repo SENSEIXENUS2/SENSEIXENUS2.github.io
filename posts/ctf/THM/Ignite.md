@@ -11,11 +11,11 @@
 
   ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/c477767f-6e77-4447-92a4-eb99dcde4306)
 
-- FUELCMS 1.4.1 has  reported exploit on exploit database,<a href="https://www.exploit-db.com/exploits/50477">Link to exploit</a>
+- Exploit database has an exploit for FUELCMS1.4.1,<a href="https://www.exploit-db.com/exploits/50477">Link to exploit</a>
 
   ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/e986eea2-b748-4a67-a7f9-b1c236942e3d)
 
-- I found an exploit on github which allows us to pop a reverse shell or grants a shell.<a href="https://github.com/AssassinUKG/fuleCMS">Exploit</a>
+- I found an exploit on github which allows us to pop a reverse shell or a shell.<a href="https://github.com/AssassinUKG/fuleCMS">Exploit</a>
 
   ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/96d08669-3778-4c54-83f0-d67a8e3296b6)
 
