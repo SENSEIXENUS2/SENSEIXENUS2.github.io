@@ -11,7 +11,7 @@
 
   ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/c477767f-6e77-4447-92a4-eb99dcde4306)
 
-- FUELCMS 1.4.1 has an rce exploit for it via php code injection,<a href="https://www.exploit-db.com/exploits/50477">Link to exploit</a>
+- FUELCMS 1.4.1 has  reported exploit on exploit database,<a href="https://www.exploit-db.com/exploits/50477">Link to exploit</a>
 
   ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/e986eea2-b748-4a67-a7f9-b1c236942e3d)
 
