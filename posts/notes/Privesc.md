@@ -39,3 +39,6 @@
 
    ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/cf277f1d-1664-4ea8-a1f0-1461101c5006)
    
+### Privesc with pkexec(suidbit) ver 0.105(CVE-2021-4034)
+   Use this <a href="https://github.com/arthepsy/CVE-2021-4034">exploit</a>
+   <a href="https://www.exploit-db.com/exploits/50689">Exploit db's link</a>
