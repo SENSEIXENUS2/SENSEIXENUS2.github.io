@@ -5,7 +5,8 @@
 
       find / -perm -u=s -type f 2</dev/null
 
-### CRON TABS
+### CRON JOBS
+  <a href="https://vk9-sec.com/exploiting-the-cron-jobs-misconfigurations-privilege-escalation/">Link to MORE ON CRON JOBS</a>
 - Check cronjobs with
 
        cat /etc/crontab
