@@ -15,7 +15,7 @@
 
   ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/e986eea2-b748-4a67-a7f9-b1c236942e3d)
 
-- I found an exploit on github which allows us to pop a rev shell or grants system access.<a href="https://github.com/AssassinUKG/fuleCMS">Exploit</a>
+- I found an exploit on github which allows us to pop a reverse shell or grants a shell.<a href="https://github.com/AssassinUKG/fuleCMS">Exploit</a>
 
   ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/96d08669-3778-4c54-83f0-d67a8e3296b6)
 
