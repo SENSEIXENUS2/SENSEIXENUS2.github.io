@@ -48,11 +48,11 @@
 
 ### Privesc with cronjob running a writable script as root
 
-- View existing crontab with "cat /etc/crontab"
+- View existing cronjob with "cat /etc/crontab"
 
   ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/9d1d9bc0-f8b8-4e3c-8a3f-63cdce079faf)
 
-- Checking the status if it is active with "service cron status"
+- Checking the status of the cron job with "service cron status"
 
   ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/bf0e8c78-bddb-4175-a0ac-77b1468b069f)
 
