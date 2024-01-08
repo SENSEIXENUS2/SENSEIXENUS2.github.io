@@ -79,7 +79,7 @@
 
   ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/3966397a-d9ac-4a05-8262-3b1d020669f6)
 
-- Root access
+- Root access gained
   
  
   
