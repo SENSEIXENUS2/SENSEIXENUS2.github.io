@@ -26,7 +26,7 @@
 
 ### PRIVESC
 
-- The server runs a pkexec binary that can be used for privilege escalation(pkexec0.105).<a href="https://github.com/arthepsy/CVE-2021-4034">Link to exploit</a>
+- The server runs a vulnerable pkexec binary that can be used for privilege escalation(pkexec0.105).<a href="https://github.com/arthepsy/CVE-2021-4034">Link to exploit</a>
 
   ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/28b5d43b-b071-4b5e-9ae4-e1efae95bd2b)
 
