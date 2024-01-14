@@ -12,7 +12,7 @@
 
    ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/dc0b30d8-7982-473c-9930-3c4547640b60)
 
-- I identified the web path with a documentation by tutorialspoint on COUCHDB [<a href="https://www.tutorialspoint.com/couchdb/couchdb_quick_guide.htm">Dcoumentation</a>]
+- I identified the web path with a walkthrough by tutorialspoint on COUCHDB [<a href="https://www.tutorialspoint.com/couchdb/couchdb_quick_guide.htm">Documentation</a>]
 - Path "/_utils" provides the database administration tool
 
    ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/1f103828-1db1-4e37-847f-319eb0330a3f)
