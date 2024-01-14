@@ -53,5 +53,11 @@ ssh public key to his authorized keys and access his account without a password,
   ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/fb28e34e-41b3-4b9e-82d6-9fac662a6fdc)
 
    
-   
+### UNINTENDED METHOD TO PRIVESC
+
+- Overlayfs exploit can be used to escalate privileges on the server
+
+  ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/96683b33-3f8c-4436-8e37-685cc6a297c5)
+
+
   
