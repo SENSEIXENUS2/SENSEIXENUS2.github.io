@@ -14,8 +14,8 @@
   
   ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/8e15c7fe-78af-4781-94f4-95987e8de4f7)
   
-- I saw a pcap file in the page of mail'directory which I analysed with wireshark and got a username and password for a subdomain
-`development.smag.thm` which is a virtual host
+- I saw a pcap file in the page of mail's directory which I analysed with wireshark and got a username and password for a subdomain
+`development.smag.thm` which is a virtual host.
 
   ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/9bd13b5d-0318-4e3a-ad88-eb2028f4c3b0)
 
