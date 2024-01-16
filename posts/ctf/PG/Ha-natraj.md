@@ -37,13 +37,13 @@ file to log the shell.The `auth.log` file's main purpose is to log ssh authentic
 
 ### PRIVESC
 
-- The sudo version of this virtual version is vulnerable to `BARONSAMEDIT[CVE-2021-3156]`.
+- The sudo version of this machine is vulnerable to `BARONSAMEDIT[CVE-2021-3156]` kernel exploit.
 
   ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/a730c648-12b2-4201-91f0-c66267536126)
 
 - I got an exploit from this <a href="https://github.com/blasty/CVE-2021-3156">github repo</a>
 
-- Root
+- Root access
 
   ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/d3b91ed1-0418-4e50-9f70-8ef35e67b087)
 
