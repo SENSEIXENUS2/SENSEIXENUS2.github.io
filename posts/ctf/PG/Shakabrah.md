@@ -9,7 +9,7 @@
   ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/d4137a85-bd12-48cf-bdbe-8a90aefac3be)
 
 - I did not fuzz for directories because the index page allows users to ping an ip address with the linux ping tool,I sensed that it
-might be using the php `system() method`,we can use it to our advantage by closing the ping statement with a semicolon and executing a rev shell e.g `;ls`
+might be using the php `system() method`,we can use it to our advantage by closing the ping statement with a semicolon and executing a rev shell e.g `;ls`.In summary,the page is vulnerable to shell command injection
 
  ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/3eed71ac-bfa3-46e0-9237-d02570cd72a9)
 
