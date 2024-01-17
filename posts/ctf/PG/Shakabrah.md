@@ -26,5 +26,5 @@ might be using the php `system() method`,we can use it to our advantage by closi
 
     ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/05756031-0299-44c7-b6b0-09d64ce4cc95)
 
-- 
+- Root access
   
