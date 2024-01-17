@@ -15,7 +15,7 @@
 - Ffuf's result
  ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/6338d69a-1020-48ed-9942-49549558e7dd)
 
-- v2 reveals an admin page,we can also register a user
+- V2 ditectory reveals an admin page that allows users to register 
 
   ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/059f5f25-684b-4a4a-b791-481f828383ff)
 
@@ -23,7 +23,7 @@
 
   ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/8545b9fe-3838-48f6-90da-b63f54b69ea4)
 
-- The password reset functionality is vulnerable becuase allows us to reset an account's password without any restrictions e,g sending
+- The password reset functionality is vulnerable becuase it allows us to reset an account's password without any restrictions e,g sending
 a magic link to the email
   ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/2759ec91-fda5-416c-8d96-6b3ec77ef82b)
 
@@ -33,7 +33,7 @@ a magic link to the email
 
 ### GETTING SHELL
 
-- One of the features of the admin account is that it allows the admin to upload a profile image,we can abuse that feature to get a shell
+- The admin account allows the admin to unlock the profile image upload feature,we can abuse that feature to get a shell by uploading a php webshell
 
   ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/09585a99-2045-4c27-bda2-b53fc889ff9f)
 
@@ -41,7 +41,7 @@ a magic link to the email
 
    ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/2b3b466b-2771-4304-992e-35c7b955167d)
 
-- After viewing the source code of "v2/profile.php" ,I discovered that it has a special directory for storing uploaded pictures
+- After viewing the source code of `v2/profile.php` ,I discovered that the site has a special directory for storing uploaded pictures
 
   ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/57f2fb70-6694-40c2-8c59-41139d1d8d77)
 
