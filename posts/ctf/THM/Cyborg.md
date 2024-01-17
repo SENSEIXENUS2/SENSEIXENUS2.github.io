@@ -36,7 +36,7 @@
 
 ### Cracking the hash with John
 
-- Use "john --show <hashfile> to show password after cracking
+- Use `john --show <hashfile>` to show password after cracking
 
   ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/1109564d-67ad-4e72-8664-5de5ddfc4dd2)
 
