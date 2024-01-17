@@ -37,7 +37,7 @@ a magic link to the email
 
   ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/09585a99-2045-4c27-bda2-b53fc889ff9f)
 
-- I was able to upload a shell php,the site has no file upload restrictions
+- I was able to upload a php web shell because the site has no file upload restrictions
 
    ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/2b3b466b-2771-4304-992e-35c7b955167d)
 
