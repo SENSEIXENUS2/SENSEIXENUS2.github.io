@@ -57,8 +57,12 @@ a magic link to the email
 
 ### PRIVESC WITH POLKIT AND PKEXEC 0.105.0
 
-- POLKIT has an exploit as stated in `cve-2021-4034`.Polkit (formerly PolicyKit) is a component for controlling system-wide privileges in Unix-like operating systems. It provides an organized way for non-privileged processes to communicate with privileged processes. It is also possible to use polkit to execute commands with elevated privileges using the command pkexec followed by the command intended to be executed (with root permission).
+- POLKIT has an exploit as stated in `cve-2021-4034`.Polkit (formerly PolicyKit) is a component for controlling system-wide privileges in Unix-like operating systems. It provides an organized way for non-privileged processes to communicate with privileged processes. It is also possible to use polkit to execute commands with elevated privileges using the command pkexec followed by the command intended to be executed (with root permission).The exploit works on pkexec ver 0.105
 
-     `find / -perm -u=s -type f 2</dev/null`
-  ![Uploading image.png…]()
+    ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/e6c7dbdc-639d-4f27-bb88-886b98848b05)
+
+- ROOT access
+
+    ![z](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/45f2b139-f5cf-4a7b-bd39-6c46cde6fed9)
+
 
