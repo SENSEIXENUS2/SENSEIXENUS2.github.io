@@ -77,12 +77,13 @@ def get_command(num):
   ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/c60e1dc3-25d1-482d-aebd-6983f8a70ed5)
 
 - Receive the file with python http.server,change permissions with `chmod 600` and login with `ssh -i <priv key> root@ip`,root access
+
   ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/1c814e54-eff2-4003-8e04-2134a26452fa)
 
 ### Unintended method
 
 - Use Overlayfs exploit
+
   ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/4058e674-e367-49d6-98e4-444bac936697)
 
   
---
