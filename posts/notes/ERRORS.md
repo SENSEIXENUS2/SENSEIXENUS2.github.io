@@ -53,4 +53,4 @@
      sudo pip install click==8.1.6
 
 ### /bin/bash^M: bad interpreter:
-`sed -i -e 's/\r$//' <script name>`
+     sed -i -e 's/\r$//' <script name>
