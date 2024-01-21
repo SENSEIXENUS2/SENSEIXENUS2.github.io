@@ -35,7 +35,7 @@
 
 ### Privilege escalation with lxd user
 
-- I ran `id` and discovered that his account is part of the user group
+- I ran `id` and discovered that his account is part of the user group,we can escalate privileges by creating a misconfigured container lxc
   ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/daa34c20-99a8-424c-a5f4-25111ffdb8b8) 
   
 
