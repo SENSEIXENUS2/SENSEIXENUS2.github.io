@@ -81,9 +81,13 @@
       lxc start juggernaut
       lxc list
 
-  ![Uploading image.png…]()
+  ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/c47dde3e-73c5-4e02-a940-1630f4f613a4)
 
- - To execute the container use `lxc exec juggernaut sh` 
+ - To execute the container use `lxc exec juggernaut sh`
+ - Breakout with `chroot /root/mnt`,voila!!!, root accesss
+
+   ![Uploading image.png…]()
+
 
   
   
