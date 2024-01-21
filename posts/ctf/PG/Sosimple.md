@@ -56,16 +56,17 @@
 
 - Use a directory like `/dev/shm` or `/tmp` to receive the alpine image
 - Set up a python http server and send the recent image
-  ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/3d54e4a2-233d-4cfe-b4bd-fce90a703b06)
-  ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/4ea75f7d-8504-43fa-a3dd-801f02bc7236)
+
+  ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/3d54e4a2-233d-4cfe-b4bd-fce90a703b06)  
 
 - Receive it on `/tmp/` to initialize the image
 
-  ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/b4dac9c1-aef5-4e62-aa18-43286b897811)
+  ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/4ea75f7d-8504-43fa-a3dd-801f02bc7236)
+  
 
 - Create a storage pool with `lxd init`
 
-  ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/23511f48-5d10-481d-aa8d-f120e604ea71)
+  ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/b4dac9c1-aef5-4e62-aa18-43286b897811)  
 
 - Import the image with this command
 
@@ -81,13 +82,13 @@
       lxc config device add juggernaut gimmeroot disk source=/ path=/mnt/root recursive=true
       lxc start juggernaut
       lxc list
-
-  ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/c47dde3e-73c5-4e02-a940-1630f4f613a4)
+   ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/23511f48-5d10-481d-aa8d-f120e604ea71)
+  
 
  - To execute the container use `lxc exec juggernaut sh`
  - Breakout with `chroot /root/mnt`,voila!!!, root accesss
 
-   ![Uploading image.png…]()
+   ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/c47dde3e-73c5-4e02-a940-1630f4f613a4)
 
 
   
