@@ -101,7 +101,7 @@
 
 ### PRIVESC WITH CAPABILITIES
 
-- To check for binaries with capabilities,use `getcap -r / 2</dev/null`,Python3 has a cap_setuid capabilities which will allow us to setuid of users
+- To check for binaries with capabilities,use `getcap -r / 2</dev/null`,Python3 has a cap_setuid capability which will allow us to setuid of users
 
   ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/7a01dfb3-6384-425d-a712-31c0ecdad1ac)
 
