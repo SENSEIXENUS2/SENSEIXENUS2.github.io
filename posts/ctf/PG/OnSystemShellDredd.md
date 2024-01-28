@@ -67,7 +67,8 @@
 
 - After running `find / -perm -u=s 2</dev/null`,I discovered that a binary cpulimit has a suid bit
 
-   ![Uploading image.png…]()
+   ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/2d5d5205-1b68-4966-bcf6-78a5acc9d4a3)
+
 
 
 - I got this one liner from gtfobins to escalate privileges
@@ -76,4 +77,5 @@
 
 - Root access!!!!
 
-  
+  ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/781f079d-eb03-4b86-8617-0cf2bcdd57a5)
+
