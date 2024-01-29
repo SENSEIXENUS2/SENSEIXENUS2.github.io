@@ -102,7 +102,6 @@
         #! /usr/bin/env python3
         import requests
         from bs4 import BeautifulSoup
-        
         from Crypto.Util.number import *
         # retrieving the data from the site *add your machine_ip to the script[format http://<ip>]
         r = requests.get("<your target address>").text
