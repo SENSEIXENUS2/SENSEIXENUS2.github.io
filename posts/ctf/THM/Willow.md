@@ -104,7 +104,7 @@
         from bs4 import BeautifulSoup
         
         from Crypto.Util.number import *
-        # retrieving the data from the site
+        # retrieving the data from the site *add your machine_ip to the script[format http://<ip>]
         r = requests.get("<your target address>").text
         bs = BeautifulSoup(r,'lxml')
         rsa_numbers = bytes.fromhex(str(bs.find('p')).split('<p>')[1].split('</p>')[0]).decode().split('\n')[1]
@@ -174,6 +174,8 @@ the root user password
   ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/0e0c2ca7-0625-4d39-a7de-e704ec07f01b)
 
 - To get root.txt,use steghide to extract the text file from user.jpg,the password is the root user's password
+
+   ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/3f386ebf-ba37-4a88-ac13-d9d96655c3e2)
 
   
   
