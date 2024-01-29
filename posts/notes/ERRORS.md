@@ -54,3 +54,7 @@
 
 ### /bin/bash^M: bad interpreter:
      sed -i -e 's/\r$//' <script name>
+
+### Enter passphrase for key 'id_rsa':sign_and_send_pubkey: no mutual signature supported
+
+        ssh -o PubkeyAcceptedKeyTypes=ssh-rsa -i id_rsa <user>@<ip>
