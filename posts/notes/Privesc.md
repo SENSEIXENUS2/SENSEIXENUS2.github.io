@@ -104,7 +104,9 @@
 - Import the image with
 
        lxc image import alpine-v3.16-x86_64-20221112_0508.tar.gz --alias alpine
+- Confirm if it has been imported with
 
+      lxc image list
 - Initiate the image
 
        lxc init alpine juggernaut -c security.privileged=true
