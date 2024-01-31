@@ -170,5 +170,7 @@ Using a fine-grained set of privileges: Use of capability can be more clearly un
        cpulimit -l 100 -f -- /bin/sh -p
 
 
+### Restricted  bash bypass with SSH
 
+    ssh -i id_rsa tom@target-ip -t "bash —noprofile"
             
