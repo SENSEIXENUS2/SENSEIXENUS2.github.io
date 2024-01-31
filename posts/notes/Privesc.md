@@ -101,6 +101,9 @@
  
 -  Receive it on your target machine with pyhton,test directories like `/dev/shm` or`/tmp`,receive the file on your target machine
  with python http.server.Send the one with a recent date
+- Import the image with
+
+       lxc image import alpine-v3.16-x86_64-20221112_0508.tar.gz --alias alpine
 
 - Initiate the image
 
