@@ -25,9 +25,7 @@ the content when a get request is made to  `http://127.0.0.1:1337/flag`.
         if __name__ == "__main__":
             app.run(port=1337)
 
-- `Main.py` allows users to make request with the aid of the `requests.get()` method.Sinc the flask application is running on the server,we can make a request to
-http://127.0.0.1:1337/flag to get the flag.Although, the code restricts users from adding "127","x","flag" and using 2 dots to the url they want
-to make a request to.
+- `Main.py` allows users to make request with the aid of the `requests.get()` method.Since the flask application is running on the server,we can make a request to http://127.0.0.1:1337/flag to get the flag.Although, the code restricts users from adding "127","x","flag" and adding 2 dots to the url.
       
       #!/usr/local/bin/python
       
@@ -65,6 +63,6 @@ to make a request to.
       if __name__ == "__main__":
           app.run()
 ### Bypassing the restrictions
-- Instead of `127.0.0.1`, we can replace it with `localhost` because `localhost` is also a loopback address.This will also bypass the restrictions of the two dots.
+- Instead of `127.0.0.1`, we can replace it with `localhost` because `localhost` is also a loopback address.This will also bypass the restriction of the two dots.
 To use the string "flag",we can url-encode one of the characters of the string "flag".
   
