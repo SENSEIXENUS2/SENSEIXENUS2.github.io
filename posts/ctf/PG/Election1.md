@@ -62,7 +62,7 @@
 
 ### PRIVESC
 
-- The server contains a Serv-U ver 15.1.6 which has a local privilege escalation exploit.
+- The server contains a Serv-U ver 15.1.6 binary which has a local privilege escalation exploit.
 
   ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/d6e86270-d4f9-45f3-8e2d-2cee57510d17)
 
