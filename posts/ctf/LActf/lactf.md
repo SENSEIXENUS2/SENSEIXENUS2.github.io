@@ -173,8 +173,7 @@ hits a score of 100
           [ball, me]
         ]));
 
-- I noticed some message codes used to interact with the server via websockets.GAME_UPDATE is sent if the game is still on and the ball pos is within the range of 100 ,GAME_END is also sent if the ball pos is lesser than 0 to end the game and
-if it is higher than 100 to send the flag.
+- I noticed some message codes used to interact with the server via websockets.GAME_UPDATE is sent if the game is still on and the ball pos is within the range of 0 and 100 ,GAME_END is also sent if the ball pos is lesser than 0 to end the game and if it is higher than 100 to send the flag.
       
        app.ws('/ws', (ws, req) => {
         const yMax = 30;
@@ -211,7 +210,7 @@ if it is higher than 100 to send the flag.
         ]));
         clearInterval(interval);
 
-- I wrote a py script to send negative numbers to the server with websockets python library.I faced the hurdle of sending ball pos with the client_update message code [1],I kept losing the server.
+- I wrote a py script to send negative numbers to the server with websockets python library.I faced the hurdle of sending ball pos with the client_update message code [1],I kept losing to the server.
 
                 value: str = json.dumps([1,[[i,i],[i,i]]])
                 print("[+]Value:"+value)
@@ -219,9 +218,7 @@ if it is higher than 100 to send the flag.
 
   ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/0c2076ab-b0da-4523-b6f0-5da8b64e28a6)
 
-- I decided to change the message code to GAME_END[2] and I started getting ball pos within the range of 0 - 50 till I got the flag.I really don't know the logic behind my answer but it takes time
-  for the script to get the flag because of the numbers.You might need to try a couple of time and the negative number the script used to get the flag the last time might not get the flag again.Oops,what a mysterious
-  answer to a mysterious challenge.
+- I decided to change the message code to GAME_END[2] and I started getting ball pos within the range of 0 - 50 till I got the flag.I really don't know the logic behind my answer but it takes time for the script to get the flag because of the numbers.You might need to try a couple of times to get the flag.Oops,what a mysterious solution  to a mysterious challenge.
 
   
   
