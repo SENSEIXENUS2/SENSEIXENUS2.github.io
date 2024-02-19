@@ -229,7 +229,7 @@ hits a score of 100
       async def connect_to_websocket():                                     
             uri = "ws://pogn.chall.lac.tf/ws"                               
             async with websockets.connect(uri) as websocket:                    
-                  for i in range(-10000,10000):                                         
+                  while True:                                         
                       resp = await websocket.recv()
                       print("First resp:"+resp)                                       
                       value: str = json.dumps([2,[[i,i],[i,i]]])                      
