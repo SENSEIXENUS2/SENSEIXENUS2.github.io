@@ -293,4 +293,7 @@ hits a score of 100
         [+]Value:[2, [[-4512, -8281], [-4371, -8529]]]
         
 
- 
+You can find Bl4ckan0n's writeup [here](https://github.com/BlackAnon22/BlackAnon22.github.io/blob/main/posts/CTF%20Competitions/lactf_2024.md)
+
+
+Thanks for reading!!!!
