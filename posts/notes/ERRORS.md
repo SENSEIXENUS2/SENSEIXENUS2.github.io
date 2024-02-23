@@ -58,3 +58,27 @@
 ### Enter passphrase for key 'id_rsa':sign_and_send_pubkey: no mutual signature supported
 
         ssh -o PubkeyAcceptedKeyTypes=ssh-rsa -i id_rsa <user>@<ip>
+
+### Error in ysoserialize.jar while exploiting  CVE-2015-7501 
+
+ `Error while generating or serializing payload
+com.nqzero.permit.Permit$InitializationFailed: initialization failed, perhaps you're running with a security manager
+        at com.nqzero.permit.Permit.setAccessible(Permit.java:22)
+        at ysoserial.payloads.util.Reflections.setAccessible(Reflections.java:17)
+        at ysoserial.payloads.CommonsCollections5.getObject(CommonsCollections5.java:83)
+        at ysoserial.payloads.CommonsCollections5.getObject(CommonsCollections5.java:51)
+        at ysoserial.GeneratePayload.main(GeneratePayload.java:34)
+Caused by: com.nqzero.permit.Permit$FieldNotFound: field "override" not found
+        at com.nqzero.permit.Permit.<init>(Permit.java:222)
+        at com.nqzero.permit.Permit.build(Permit.java:117)
+        at com.nqzero.permit.Permit.<clinit>(Permit.java:16)
+        ... 4 more`
+
+   ### FIX     
+
+ - Install jdk 8 [link to jdk 8](https://builds.openlogic.com/downloadJDK/openlogic-openjdk/8u402-b06/openlogic-openjdk-8u402-b06-linux-x64-deb.deb)
+ - The use `sudo update-alternatives --config java` to pick jdk 8
+
+   ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/3193cce5-59d4-4829-8d31-a39f4b563596)
+
+
