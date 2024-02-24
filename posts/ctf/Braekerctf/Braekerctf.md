@@ -38,4 +38,6 @@ to check if the binary or executable can be executed.If it cannot be executed,it
     
         return jsonify({'message': 'Not implemented'}), 501
 
-### Payload
+### Creating a Payload
+
+- The first step is to bypass the os.access() filter by ensuring that it returns True,
