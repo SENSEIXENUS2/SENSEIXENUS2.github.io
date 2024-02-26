@@ -62,6 +62,7 @@ the os method `popen` executes shell commands on the server.
             # Execute binary if it exists and is executable
             out = os.popen(command).read()
             return jsonify({'message': 'Command output: ' + str(out)}), 200
+
 - This code changes directory to a directory named executables
 
        # Make sure we can only execute binaries in the executables directory
