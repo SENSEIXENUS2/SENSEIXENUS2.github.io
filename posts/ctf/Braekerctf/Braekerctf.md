@@ -48,8 +48,7 @@ def run_command():
     return jsonify({'message': 'Not implemented'}), 501
 
 
-if __name__ == '__main__':
-    
+if __name__ == '__main__':   
     # Make sure we can only execute binaries in the executables directory
     os.chdir('./executables/')
     # Run server
@@ -63,6 +62,11 @@ the os method `popen` executes shell commands on the server.
             # Execute binary if it exists and is executable
             out = os.popen(command).read()
             return jsonify({'message': 'Command output: ' + str(out)}), 200
+- This code changes directory to a directory named executables
+
+       # Make sure we can only execute binaries in the executables directory
+         os.chdir('./executables/')
+  
 ### Security checks
 - But the code filters some characters from the user input e.git raises an alert `Hacking attempt detected` if the user input contains '..' or '/'.
 It also raises a `command too short` error if the user input is lesser than 5 .
