@@ -1,3 +1,4 @@
+
 ### CTF: BRAEKERCTF
 
 
@@ -12,9 +13,9 @@
 
 ### Source Code:
 
-```     
- from flask import Flask, jsonify, request
- import os
+```
+from flask import Flask, jsonify, request
+import os
 
 
 app = Flask(__name__)
@@ -69,8 +70,7 @@ if __name__ == '__main__':
          os.chdir('./executables/')
   
 ### Security checks
-- But the code filters some characters from the user input e.git raises an alert `Hacking attempt detected` if the user input contains '..' or '/'.
-It also raises a `command too short` error if the user input is lesser than 5 .
+- But the code filters some characters from the user input e.git raises an alert `Hacking attempt detected` if the user input contains '..' or '/'.It also raises a `command too short` error if the user input is lesser than 5 .
 
         # Length check
         if len(command) < 5:
@@ -80,8 +80,7 @@ It also raises a `command too short` error if the user input is lesser than 5 .
         if '..' in command or '/' in command:
             return jsonify({'message': 'Hacking attempt detected'}), 501
 
-- Lastly, it uses the split() method to cut characters before `[space]`, tag it as the variable executable_to_run and use os.access()
-to check if the binary or executable can be executed.If it cannot be executed,it raises an error message `Not implemented`.
+- Lastly, it uses the split() method to cut characters before `[space]`, tag it as the variable executable_to_run and use os.access() to check if the binary or executable can be executed.If it cannot be executed,it raises an error message `Not implemented`.
     
        # Check if we can execute the binary
             if os.access(executable_to_run, os.X_OK):
