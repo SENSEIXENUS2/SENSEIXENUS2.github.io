@@ -11,6 +11,7 @@
  ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/dbd88f21-d29a-4ada-a85a-36e21201fa20)
 
 ### Source Code:
+
 ```     
  from flask import Flask, jsonify, request
  import os
@@ -55,8 +56,7 @@ if __name__ == '__main__':
     app.run(host='0.0.0.0', port=80)
 ```
 
-- The goal of this challenge is to read flag.txt.After reading the source code,I noticed that the webpage is vulnerable to command injection because the
-the os method `popen` executes shell commands on the server.
+- The goal of this challenge is to read flag.txt.After reading the source code,I noticed that the webpage is vulnerable to command injection because the os method `popen` executes shell commands on the server.
 
   
             # Execute binary if it exists and is executable
