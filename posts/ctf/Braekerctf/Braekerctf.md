@@ -2,7 +2,7 @@
 ### CTF: BRAEKERCTF
 
 
-### Challenge:https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/edit/main/posts/ctf/Braekerctf/Braekerctf.md
+### Challenge:
 
 - Empty execution [web]
 
