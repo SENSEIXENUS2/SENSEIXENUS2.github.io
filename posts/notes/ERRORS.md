@@ -81,4 +81,10 @@ Caused by: com.nqzero.permit.Permit$FieldNotFound: field "override" not found
 
    ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/3193cce5-59d4-4829-8d31-a39f4b563596)
 
+### Error message "go: go.mod file not found in current directory or any parent directory; see 'go help modules'"
 
+- Set GOPATH env variable
+
+      export PATH=$PATH:$(go env GOPATH)/bin
+      go env -w GO111MODULE=off
+  
