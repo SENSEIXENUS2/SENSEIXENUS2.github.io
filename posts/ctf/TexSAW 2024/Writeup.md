@@ -86,9 +86,65 @@
 
 ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/1deae3cb-e7b9-4295-b4dc-4e95ff32f7c4)
 
-- In this challenge, the site will only allow requests from this origin "https://texsaw2024.com" will be allowed which means  Cross Origin Resource Sharing configuration pf the site is set to the url above.A request made by a url `http://texsaw2024.com` will be restricted because of the `http://` protocol in the url
+- In this challenge, the site will only allow requests from this origin `https://texsaw2024.com` will be allowed which means  Cross Origin Resource Sharing configuration pf the site is set to the url above.A request made by a url `http://texsaw2024.com` will be restricted because of the `http://` protocol in the url
 
   ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/4c908f0f-bacd-4db5-a456-95dc6e03c502)
 
 - 
 
+
+
+
+
+
+### Challenge 4: Over 9000
+
+![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/92c0a2fd-a501-41c9-9336-c9bb5e303a47)
+
+- In this challenge, players will only be granted the flag if they score an energy of over 9000 energy.
+
+  ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/d04caa09-d7eb-42a8-a286-b235e558884d)
+
+- The challenge contains a javascript code located in a file `9000.js`
+
+  
+      let currentEnergy = 0;
+      
+      function gatheringEnergy(){
+          currentEnergy++;
+          $("#energycount").html(`${currentEnergy}`);
+          if(currentEnergy == 10)
+          {
+              alert("out of energy try again :(")
+              currentEnergy = 0;
+              $("#energycount").html(0);
+              
+          }
+          else if (currentEnergy > 9000)
+          {
+              
+              $.ajax({
+                  type:"POST",
+                  url:"kamehameha.php",
+                  data:{energy: currentEnergy},
+                  success: function(flag){
+                      alert(`${flag}`);
+                  },
+                  error: function(responseText,status, error){
+                      console.log(`Tell the infrastructure team to fix this: Status = ${status} ; Error = ${error}`);
+                  }
+      
+      
+              })
+              
+          }
+      }
+ - The code snippet states that if the `currentEnergy` variable is greater than 9000, a POST request with data stating the amount of current energy is made to another page `kamehameha.php` which grants us the flag. Instead of playing the game, we can just make a request to the `kamehameha.php` page with current energy of 9000 to get the flag.
+
+          ❯ curl http://3.23.56.243:9005/kamehameha.php -d "energy=90000" -X POST
+        texsaw{y0u_th0ught_th1s_w4s_4_fl4g_but_1t_w4s_m3_d10}
+
+Challenge 5: Ask and it shall be given unto you
+   
+
+   
