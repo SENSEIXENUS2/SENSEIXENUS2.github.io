@@ -139,12 +139,281 @@
               
           }
       }
- - The code snippet states that if the `currentEnergy` variable is greater than 9000, a POST request with data stating the amount of current energy is made to another page `kamehameha.php` which grants us the flag. Instead of playing the game, we can just make a request to the `kamehameha.php` page with current energy of 9000 to get the flag.
+ - The code snippet states that if the `currentEnergy` variable is greater than 9000, a POST request with data stating the amount of current energy is made to another page `kamehameha.php` which grants us the flag. Instead of playing the game, we can just make a request to the `kamehameha.php` page with an energy greater than 9000 to get the flag.
 
           ❯ curl http://3.23.56.243:9005/kamehameha.php -d "energy=90000" -X POST
         texsaw{y0u_th0ught_th1s_w4s_4_fl4g_but_1t_w4s_m3_d10}
 
-Challenge 5: Ask and it shall be given unto you
-   
+Challenge 5: Ask and it shall be given to you
+
+![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/7742c1ce-594b-47d8-9b24-d88d7ac59334)
+
+- The index page presented a message stating that the website is down
+
+  ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/eb2920c6-7343-4abf-80d5-2b3bf4a253b6)
+
+- I fuzzed for pages with ffuf and I got 3 hits.
+
+  ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/f39fcf8d-c358-48ba-af93-8f021f8cdc6b)
+
+- Checking `robots.txt` reveals 2 hidden pages
+
+  ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/7f9b173e-5cd1-4735-bbe1-f5c019af1549)
+
+- The ContactIT page welcomes me with a message that states `Post:Json Request Only`.I made a request to the url with json data with curl and I got an error revealing the source code of the web app which is in python.
+
+  CURL request:
+
+  `curl http://3.23.56.243:9008/contactIT -H 'Content-Type: application/json' -d '{"milk": "sleep"}'`
+
+  Response/Error:
+        
+           <!doctype html>
+        <html lang=en>
+          <head>
+            <title>TypeError: argument of type &#39;NoneType&#39; is not iterable
+         // Werkzeug Debugger</title>
+            <link rel="stylesheet" href="?__debugger__=yes&amp;cmd=resource&amp;f=style.css">
+            <link rel="shortcut icon"
+                href="?__debugger__=yes&amp;cmd=resource&amp;f=console.png">
+            <script src="?__debugger__=yes&amp;cmd=resource&amp;f=debugger.js"></script>
+            <script>
+              var CONSOLE_MODE = false,
+                  EVALEX = true,
+                  EVALEX_TRUSTED = false,
+                  SECRET = "WYleT8qx5TNo2HMQyp6Q";
+            </script>
+          </head>
+          <body style="background-color: #fff">
+            <div class="debugger">
+        <h1>TypeError</h1>
+        <div class="detail">
+          <p class="errormsg">TypeError: argument of type &#39;NoneType&#39; is not iterable
+        </p>
+        </div>
+        <h2 class="traceback">Traceback <em>(most recent call last)</em></h2>
+        <div class="traceback">
+          <h3></h3>
+          <ul><li><div class="frame" id="frame-140077666069248">
+          <h4>File <cite class="filename">"/usr/local/lib/python3.12/site-packages/flask/app.py"</cite>,
+              line <em class="line">1488</em>,
+              in <code class="function">__call__</code></h4>
+          <div class="source library"><pre class="line before"><span class="ws">    </span>) -&gt; cabc.Iterable[bytes]:</pre>
+        <pre class="line before"><span class="ws">        </span>&#34;&#34;&#34;The WSGI server calls the Flask application object as the</pre>
+        <pre class="line before"><span class="ws">        </span>WSGI application. This calls :meth:`wsgi_app`, which can be</pre>
+        <pre class="line before"><span class="ws">        </span>wrapped to apply middleware.</pre>
+        <pre class="line before"><span class="ws">        </span>&#34;&#34;&#34;</pre>
+        <pre class="line current"><span class="ws">        </span>return self.wsgi_app(environ, start_response)
+        <span class="ws">        </span>       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre></div>
+        </div>
+        
+        <li><div class="frame" id="frame-140077666069104">
+          <h4>File <cite class="filename">"/usr/local/lib/python3.12/site-packages/flask/app.py"</cite>,
+              line <em class="line">1466</em>,
+              in <code class="function">wsgi_app</code></h4>
+          <div class="source library"><pre class="line before"><span class="ws">            </span>try:</pre>
+        <pre class="line before"><span class="ws">                </span>ctx.push()</pre>
+        <pre class="line before"><span class="ws">                </span>response = self.full_dispatch_request()</pre>
+        <pre class="line before"><span class="ws">            </span>except Exception as e:</pre>
+        <pre class="line before"><span class="ws">                </span>error = e</pre>
+        <pre class="line current"><span class="ws">                </span>response = self.handle_exception(e)
+        <span class="ws">                </span>           ^^^^^^^^^^^^^^^^^^^^^^^^</pre>
+        <pre class="line after"><span class="ws">            </span>except:  # noqa: B001</pre>
+        <pre class="line after"><span class="ws">                </span>error = sys.exc_info()[1]</pre>
+        <pre class="line after"><span class="ws">                </span>raise</pre>
+        <pre class="line after"><span class="ws">            </span>return response(environ, start_response)</pre>
+        <pre class="line after"><span class="ws">        </span>finally:</pre></div>
+        </div>
+        
+        <li><div class="frame" id="frame-140077666069392">
+          <h4>File <cite class="filename">"/usr/local/lib/python3.12/site-packages/flask/app.py"</cite>,
+              line <em class="line">1463</em>,
+              in <code class="function">wsgi_app</code></h4>
+          <div class="source library"><pre class="line before"><span class="ws">        </span>ctx = self.request_context(environ)</pre>
+        <pre class="line before"><span class="ws">        </span>error: BaseException | None = None</pre>
+        <pre class="line before"><span class="ws">        </span>try:</pre>
+        <pre class="line before"><span class="ws">            </span>try:</pre>
+        <pre class="line before"><span class="ws">                </span>ctx.push()</pre>
+        <pre class="line current"><span class="ws">                </span>response = self.full_dispatch_request()
+        <span class="ws">                </span>           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre>
+        <pre class="line after"><span class="ws">            </span>except Exception as e:</pre>
+        <pre class="line after"><span class="ws">                </span>error = e</pre>
+        <pre class="line after"><span class="ws">                </span>response = self.handle_exception(e)</pre>
+        <pre class="line after"><span class="ws">            </span>except:  # noqa: B001</pre>
+        <pre class="line after"><span class="ws">                </span>error = sys.exc_info()[1]</pre></div>
+        </div>
+        
+        <li><div class="frame" id="frame-140077666069536">
+          <h4>File <cite class="filename">"/usr/local/lib/python3.12/site-packages/flask/app.py"</cite>,
+              line <em class="line">872</em>,
+              in <code class="function">full_dispatch_request</code></h4>
+          <div class="source library"><pre class="line before"><span class="ws">            </span>request_started.send(self, _async_wrapper=self.ensure_sync)</pre>
+        <pre class="line before"><span class="ws">            </span>rv = self.preprocess_request()</pre>
+        <pre class="line before"><span class="ws">            </span>if rv is None:</pre>
+        <pre class="line before"><span class="ws">                </span>rv = self.dispatch_request()</pre>
+        <pre class="line before"><span class="ws">        </span>except Exception as e:</pre>
+        <pre class="line current"><span class="ws">            </span>rv = self.handle_user_exception(e)
+        <span class="ws">            </span>     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre>
+        <pre class="line after"><span class="ws">        </span>return self.finalize_request(rv)</pre>
+        <pre class="line after"><span class="ws"></span> </pre>
+        <pre class="line after"><span class="ws">    </span>def finalize_request(</pre>
+        <pre class="line after"><span class="ws">        </span>self,</pre>
+        <pre class="line after"><span class="ws">        </span>rv: ft.ResponseReturnValue | HTTPException,</pre></div>
+        </div>
+        
+        <li><div class="frame" id="frame-140077666069680">
+          <h4>File <cite class="filename">"/usr/local/lib/python3.12/site-packages/flask/app.py"</cite>,
+              line <em class="line">870</em>,
+              in <code class="function">full_dispatch_request</code></h4>
+          <div class="source library"><pre class="line before"><span class="ws"></span> </pre>
+        <pre class="line before"><span class="ws">        </span>try:</pre>
+        <pre class="line before"><span class="ws">            </span>request_started.send(self, _async_wrapper=self.ensure_sync)</pre>
+        <pre class="line before"><span class="ws">            </span>rv = self.preprocess_request()</pre>
+        <pre class="line before"><span class="ws">            </span>if rv is None:</pre>
+        <pre class="line current"><span class="ws">                </span>rv = self.dispatch_request()
+        <span class="ws">                </span>     ^^^^^^^^^^^^^^^^^^^^^^^</pre>
+        <pre class="line after"><span class="ws">        </span>except Exception as e:</pre>
+        <pre class="line after"><span class="ws">            </span>rv = self.handle_user_exception(e)</pre>
+        <pre class="line after"><span class="ws">        </span>return self.finalize_request(rv)</pre>
+        <pre class="line after"><span class="ws"></span> </pre>
+        <pre class="line after"><span class="ws">    </span>def finalize_request(</pre></div>
+        </div>
+        
+        <li><div class="frame" id="frame-140077666069824">
+          <h4>File <cite class="filename">"/usr/local/lib/python3.12/site-packages/flask/app.py"</cite>,
+              line <em class="line">855</em>,
+              in <code class="function">dispatch_request</code></h4>
+          <div class="source library"><pre class="line before"><span class="ws">            </span>and req.method == &#34;OPTIONS&#34;</pre>
+        <pre class="line before"><span class="ws">        </span>):</pre>
+        <pre class="line before"><span class="ws">            </span>return self.make_default_options_response()</pre>
+        <pre class="line before"><span class="ws">        </span># otherwise dispatch to the handler for that endpoint</pre>
+        <pre class="line before"><span class="ws">        </span>view_args: dict[str, t.Any] = req.view_args  # type: ignore[assignment]</pre>
+        <pre class="line current"><span class="ws">        </span>return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+        <span class="ws">        </span>       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre>
+        <pre class="line after"><span class="ws"></span> </pre>
+        <pre class="line after"><span class="ws">    </span>def full_dispatch_request(self) -&gt; Response:</pre>
+        <pre class="line after"><span class="ws">        </span>&#34;&#34;&#34;Dispatches the request and on top of that performs request</pre>
+        <pre class="line after"><span class="ws">        </span>pre and postprocessing as well as HTTP exception catching and</pre>
+        <pre class="line after"><span class="ws">        </span>error handling.</pre></div>
+        </div>
+        
+        <li><div class="frame" id="frame-140077666069968">
+          <h4>File <cite class="filename">"/app/webapp.py"</cite>,
+              line <em class="line">26</em>,
+              in <code class="function">submitted</code></h4>
+          <div class="source "><pre class="line before"><span class="ws">    </span>if request.method == &#39;POST&#39;:</pre>
+        <pre class="line before"><span class="ws">        </span>content = request.get_json()</pre>
+        <pre class="line before"><span class="ws">        </span>sender = content.get(&#39;email&#39;)</pre>
+        <pre class="line before"><span class="ws">        </span>messege = content.get(&#39;messege&#39;)</pre>
+        <pre class="line before"><span class="ws">        </span>f.setSender(sender)</pre>
+        <pre class="line current"><span class="ws">        </span>f.checkResponds(messege)
+        <span class="ws">        </span>^^^^^^^^^^^^^^^^^^^^^^^^</pre>
+        <pre class="line after"><span class="ws">    </span>else:</pre>
+        <pre class="line after"><span class="ws">        </span>return &#34;Post:Json Request Only&#34;</pre>
+        <pre class="line after"><span class="ws">    </span>return &#34;Email Sent!&#34;</pre>
+        <pre class="line after"><span class="ws"></span> </pre>
+        <pre class="line after"><span class="ws"></span>@app.route(&#34;/countdown&#34;)</pre></div>
+        </div>
+        
+        <li><div class="frame" id="frame-140077666070112">
+          <h4>File <cite class="filename">"/app/floaty.py"</cite>,
+              line <em class="line">17</em>,
+              in <code class="function">checkResponds</code></h4>
+          <div class="source "><pre class="line before"><span class="ws">    </span>def setSender(self, email):</pre>
+        <pre class="line before"><span class="ws">        </span>self.sendto = email</pre>
+        <pre class="line before"><span class="ws"></span> </pre>
+        <pre class="line before"><span class="ws"></span>#Check Responds for flag or fake</pre>
+        <pre class="line before"><span class="ws">    </span>def checkResponds(self, responds):</pre>
+        <pre class="line current"><span class="ws">        </span>if &#34;flag&#34; in responds:
+        <span class="ws">        </span>   ^^^^^^^^^^^^^^^^^^</pre>
+        <pre class="line after"><span class="ws">            </span>self.sendFlag()</pre>
+        <pre class="line after"><span class="ws">        </span>else:</pre>
+        <pre class="line after"><span class="ws">            </span>self.sendFake()</pre>
+        <pre class="line after"><span class="ws"></span> </pre>
+        <pre class="line after"><span class="ws"></span>#Send Flag if requested</pre></div>
+        </div>
+        </ul>
+          <blockquote>TypeError: argument of type &#39;NoneType&#39; is not iterable
+        </blockquote>
+        </div>
+        
+        <div class="plain">
+            <p>
+              This is the Copy/Paste friendly version of the traceback.
+            </p>
+            <textarea cols="50" rows="10" name="code" readonly>Traceback (most recent call last):
+          File &#34;/usr/local/lib/python3.12/site-packages/flask/app.py&#34;, line 1488, in __call__
+            return self.wsgi_app(environ, start_response)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+          File &#34;/usr/local/lib/python3.12/site-packages/flask/app.py&#34;, line 1466, in wsgi_app
+            response = self.handle_exception(e)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^
+          File &#34;/usr/local/lib/python3.12/site-packages/flask/app.py&#34;, line 1463, in wsgi_app
+            response = self.full_dispatch_request()
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+          File &#34;/usr/local/lib/python3.12/site-packages/flask/app.py&#34;, line 872, in full_dispatch_request
+            rv = self.handle_user_exception(e)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+          File &#34;/usr/local/lib/python3.12/site-packages/flask/app.py&#34;, line 870, in full_dispatch_request
+            rv = self.dispatch_request()
+                 ^^^^^^^^^^^^^^^^^^^^^^^
+          File &#34;/usr/local/lib/python3.12/site-packages/flask/app.py&#34;, line 855, in dispatch_request
+            return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+          File &#34;/app/webapp.py&#34;, line 26, in submitted
+            f.checkResponds(messege)
+          File &#34;/app/floaty.py&#34;, line 17, in checkResponds
+            if &#34;flag&#34; in responds:
+               ^^^^^^^^^^^^^^^^^^^
+        TypeError: argument of type &#39;NoneType&#39; is not iterable
+        </textarea>
+        </div>
+        <div class="explanation">
+          The debugger caught an exception in your WSGI application.  You can now
+          look at the traceback which led to the error.  <span class="nojavascript">
+          If you enable JavaScript you can also use additional features such as code
+          execution (if the evalex feature is enabled), automatic pasting of the
+          exceptions and much more.</span>
+        </div>
+              <div class="footer">
+                Brought to you by <strong class="arthur">DON'T PANIC</strong>, your
+                friendly Werkzeug powered traceback interpreter.
+              </div>
+            </div>
+        
+            <div class="pin-prompt">
+              <div class="inner">
+                <h3>Console Locked</h3>
+                <p>
+                  The console is locked and needs to be unlocked by entering the PIN.
+                  You can find the PIN printed out on the standard output of your
+                  shell that runs the server.
+                <form>
+                  <p>PIN:
+                    <input type=text name=pin size=14>
+                    <input type=submit name=btn value="Confirm Pin">
+                </form>
+              </div>
+            </div>
+          </body>
+        </html>
+        
+- To get the flag, the json data must contain a key['email'] with the value of your email and another key['messege'] with the word "flag" to get an email containing the flag. If successful, a message 'Email sent' will be sent to the user.
+
+  ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/3550e573-2ac1-4815-8bfa-2cc6d2519b44)
+
+- Curl request to get the flag
+
+        ❯ curl http://3.23.56.243:9008/contactIT -H 'Content-Type: application/json' -d '{"email": "**************","messege": "flag"}'
+      Email Sent! 
+
+- Flag received via mail
+
+    ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/52efde8a-5ff8-4034-b578-578fcd282719)
+
+
+
+    
+
 
    
