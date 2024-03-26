@@ -86,7 +86,7 @@
 
 ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/1deae3cb-e7b9-4295-b4dc-4e95ff32f7c4)
 
-- In this challenge, the site will only allow requests from this origin `https://texsaw2024.com` will be allowed which means  Cross Origin Resource Sharing configuration pf the site is set to the url above.A request made by a url `http://texsaw2024.com` will be restricted because of the `http://` protocol in the url
+- In this challenge, the site will only allow requests from this origin `https://texsaw2024.com` will be allowed which means  Cross Origin Resource Sharing(CORS) configuration of the site is set to the url above.A request made by a url `http://texsaw2024.com` will be restricted because of the `http://` protocol in the url. The domain name should strictly apply the `https://` protocol CORS helps to restrict the kind of domain that accesses a site's resources.
 
   ![image](https://github.com/SENSEIXENUS2/SENSEIXENUS2.github.io/assets/98669513/4c908f0f-bacd-4db5-a456-95dc6e03c502)
 
